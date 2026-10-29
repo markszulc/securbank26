@@ -1,0 +1,96 @@
+/* Credit cards landing page */
+
+.cc-hero { background: var(--mint); overflow: hidden }
+.cc-hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-block: clamp(56px, 8vw, 104px) }
+.cc-hero h1 { font-size: clamp(3rem, 7.5vw, 6.2rem); line-height: .95; margin-top: 14px }
+.cc-hero h1 .hl { color: var(--primary) }
+.cc-hero .lede { margin-top: 22px }
+.hero-facts { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 28px; font-weight: 600; font-size: .95rem }
+.hero-facts span { display: flex; gap: 8px; align-items: center }
+.stack { position: relative; height: 380px }
+.stack .ccard { position: absolute; width: min(360px, 80%) }
+.stack .c1 { left: 0; top: 110px; transform: rotate(-8deg) }
+.stack .c2 { left: 16%; top: 56px; transform: rotate(-1deg) }
+.stack .c3 { left: 32%; top: 0; transform: rotate(7deg) }
+@media (max-width: 900px) { .cc-hero-grid { grid-template-columns: 1fr } .stack { height: 300px } }
+@media (max-width: 520px) {
+  .stack { height: 230px }
+  .stack .ccard { width: min(260px, 72%); padding: 14px 16px; border-radius: 14px }
+  .stack .ccard .chip { width: 32px; height: 24px; border-radius: 5px }
+  .stack .ccard .brand { font-size: .85rem }
+  .stack .ccard .name { font-size: .7rem }
+  .stack .ccard .num { font-size: .66rem }
+  .stack .c1 { top: 80px } .stack .c2 { top: 40px }
+}
+
+#compare, #eligibility { scroll-margin-top: 72px }
+.sec-head { margin-bottom: 32px }
+.filters { display: inline-flex; flex-wrap: wrap; gap: 6px; background: var(--tile); padding: 5px; border-radius: 999px; margin-bottom: 28px }
+.filters button { border: 0; background: transparent; color: var(--muted); font: 600 .95rem var(--body); padding: .65em 1.1em; border-radius: 999px; cursor: pointer; min-height: 44px }
+.filters button[aria-pressed="true"] { background: var(--card); color: var(--fg); box-shadow: 0 1px 3px rgba(0, 0, 0, .12) }
+@media (max-width: 520px) { .filters { border-radius: 24px } }
+
+.products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px }
+@media (max-width: 900px) { .products { grid-template-columns: 1fr } }
+.product { background: var(--tile); border-radius: 32px; padding: 28px; display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 24px; align-items: start }
+.product .ccard { padding: 14px 16px; border-radius: 12px }
+.product .ccard .brand { font-size: .85rem }
+.product .ccard .chip { width: 30px; height: 23px; border-radius: 5px }
+.product .ccard .name { font-size: .68rem }
+.product .ccard .num { font-size: .64rem }
+@media (max-width: 560px) { .product { grid-template-columns: 1fr; padding: 22px } .product .ccard { max-width: 260px } }
+.product-body { display: flex; flex-direction: column; gap: 12px; min-width: 0 }
+.tag { align-self: flex-start; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: .25em .75em; font-size: .8rem; font-weight: 600 }
+.product p { color: var(--muted) }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 4px }
+.stats div { background: var(--card); border-radius: 14px; padding: 10px 12px; display: grid; gap: 2px; align-content: start }
+.stats b { font-family: var(--display); font-weight: 900; font-stretch: 88%; font-size: 1.35rem; line-height: 1.05; font-variant-numeric: tabular-nums }
+.stats span { font-size: .78rem; color: var(--muted); line-height: 1.3 }
+.perks { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px }
+.perks li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem }
+.perks svg { flex: none; margin-top: 3px; color: var(--primary) }
+.actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 8px }
+.actions .btn { padding: .8em 1.3em }
+.product.feature { background: var(--primary); color: var(--ink) }
+.product.feature p, .product.feature .stats span { color: var(--ink); opacity: .85 }
+.product.feature .stats div { background: rgba(255, 255, 255, .12) }
+.product.feature .perks svg { color: var(--pop) }
+.product.feature .tag { background: transparent; border-color: rgba(255, 255, 255, .5); color: var(--ink) }
+.product.feature .btn-primary { background: var(--ink); color: var(--primary) }
+.product.feature .link { text-decoration-color: var(--ink) }
+:root[data-theme="dark"] .product.feature .perks svg { color: var(--ink) }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .product.feature .perks svg { color: var(--ink) } }
+
+.compare { min-width: 760px }
+.compare tbody th { font-weight: 600; color: var(--muted); width: 22% }
+.table-box:focus-visible { outline-offset: 2px; border-radius: 24px }
+
+/* Eligibility */
+.checks { margin-top: 28px }
+.checks li { font-size: 1.05rem }
+.elig { background: var(--card); color: var(--fg); border-radius: 32px; padding: 28px; display: grid; gap: 12px; margin: 0 }
+.elig h3 { margin-bottom: 4px }
+.field { border: 1px solid var(--line); border-radius: 16px; padding: 12px 16px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 6px }
+.field label { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); font-weight: 500 }
+.field input, .field select { border: 0; background: transparent; color: var(--fg); font: 700 1.4rem var(--body); font-variant-numeric: tabular-nums; width: 100%; min-width: 0; padding: 0; outline: none }
+.field select { font-size: 1.05rem; cursor: pointer; grid-column: 1 / -1; min-height: 32px }
+.field select option { background: var(--card); color: var(--fg) }
+.field:focus-within { border-color: var(--fg); box-shadow: 0 0 0 1px var(--fg) }
+.unit { font-weight: 700; background: var(--tile); border-radius: 999px; padding: .35em .8em }
+.elig .btn { width: 100%; margin-top: 6px }
+.elig-result { background: var(--mint); border-radius: 18px; padding: 16px 18px; display: grid; gap: 8px }
+.elig-result ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; font-weight: 600 }
+.elig small { color: var(--muted); font-size: .78rem; line-height: 1.4 }
+
+/* FAQ */
+.faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 48px; align-items: start }
+@media (max-width: 900px) { .faq { grid-template-columns: 1fr; gap: 32px } }
+.faq-list { display: grid; gap: 12px }
+details { background: var(--tile); border-radius: 20px; padding: 0 22px }
+summary { cursor: pointer; font-weight: 700; font-size: 1.08rem; padding: 20px 0; list-style: none; display: flex; justify-content: space-between; gap: 16px; align-items: center; min-height: 44px }
+summary::-webkit-details-marker { display: none }
+summary::after { content: "+"; font-family: var(--display); font-weight: 900; font-size: 1.6rem; line-height: 1; color: var(--primary) }
+details[open] summary::after { content: "\2013" }
+details p { color: var(--muted); padding-bottom: 20px; max-width: 62ch }
+
+.ftr { margin-top: 72px }

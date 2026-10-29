@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T00:00:00Z",
+  "title": "Design System: SecurBank",
+  "extensions": {
+    "colorMeta": {
+      "confident-teal": { "role": "primary", "displayName": "Confident Teal", "canonical": "#026169", "tonalRamp": ["#04262a", "#053c40", "#064f55", "#026169", "#3e6470", "#6c8f98", "#9cb7bd", "#cfe1e4"] },
+      "confident-teal-deepened": { "role": "primary-hover", "displayName": "Confident Teal, Deepened", "canonical": "#3e6470" },
+      "bright-teal-accent": { "role": "secondary", "displayName": "Bright Teal Accent", "canonical": "#8fd6db", "tonalRamp": ["#0c3a3e", "#14555b", "#1f7278", "#4fa3a9", "#8fd6db", "#b8e6e9", "#d9f1f3", "#eefaf9"] },
+      "paper-white": { "role": "neutral-bg", "displayName": "Paper White", "canonical": "#ffffff" },
+      "ink-grey": { "role": "neutral-fg", "displayName": "Ink Grey", "canonical": "#2c2c2c" },
+      "muted-grey": { "role": "neutral-muted", "displayName": "Muted Grey", "canonical": "#5b5e66" },
+      "on-teal-white": { "role": "neutral-on-accent", "displayName": "On-Teal White", "canonical": "#ffffff" },
+      "soft-mint-tint": { "role": "neutral-tint", "displayName": "Soft Mint Tint", "canonical": "#e1eff0" },
+      "lavender-grey-tile": { "role": "neutral-surface", "displayName": "Lavender-Grey Tile", "canonical": "#f3f2f6" },
+      "hairline-grey": { "role": "neutral-border", "displayName": "Hairline Grey", "canonical": "#e2e1e8" },
+      "deep-teal": { "role": "neutral-inverse-surface", "displayName": "Deep Teal", "canonical": "#023b40" },
+      "band-foreground-mint": { "role": "neutral-inverse-fg", "displayName": "Band Foreground Mint", "canonical": "#e1eff0" },
+      "card-white": { "role": "neutral-card", "displayName": "Card White", "canonical": "#ffffff" },
+      "alert-red": { "role": "error", "displayName": "Alert Red", "canonical": "#b3261e" },
+      "alert-red-tint": { "role": "error-surface", "displayName": "Alert Red Tint", "canonical": "#fbeaea" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero and section headlines, and every large standalone number (rates, stats, estimator output)." },
+      "body": { "displayName": "Body", "purpose": "All running copy, nav, form labels, table cells." },
+      "label": { "displayName": "Label / Eyebrow", "purpose": "Section kickers and small uppercase tags, colored Confident Teal." }
+    },
+    "shadows": [
+      { "name": "overlay", "value": "0 24px 40px -28px rgba(2, 40, 44, .45)", "purpose": "Dropdown menus and panels that open over content (language menu, search panel, mobile menu)." },
+      { "name": "floating-card", "value": "0 24px 60px -30px rgba(2, 97, 105, .35)", "purpose": "The home calculator card, lifted off the hero." },
+      { "name": "drawn-card", "value": "0 22px 44px -22px rgba(2, 40, 44, .55)", "purpose": "CSS-drawn credit card faces at default size." },
+      { "name": "drawn-card-stage", "value": "0 26px 50px -24px rgba(2, 40, 44, .6)", "purpose": "The drawn credit card at hero/stage scale on card-details pages." },
+      { "name": "hover-lift", "value": "0 14px 30px -22px rgba(2, 40, 44, .5)", "purpose": "Tip tile hover only; no shadow at rest." },
+      { "name": "segment-indicator", "value": "0 1px 3px rgba(0, 0, 0, .12)", "purpose": "The active segment inside a tab/filter pill control." },
+      { "name": "focus-ring", "value": "0 0 0 3px rgba(2, 97, 105, .18)", "purpose": "Soft teal glow on focused search and form fields, paired with a border color change." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "150ms ease (background, transform, border-color, box-shadow)", "purpose": "The only motion in the system: small state-change transitions. Disabled entirely under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "nav-collapse", "value": "820px" },
+      { "name": "grid-stack", "value": "900px" },
+      { "name": "trust-stack", "value": "700px" },
+      { "name": "form-stack", "value": "640px" },
+      { "name": "general-sm", "value": "600px" },
+      { "name": "lang-code-hide", "value": "520px" },
+      { "name": "footer-single-col", "value": "420px" },
+      { "name": "small-phone", "value": "380px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Pill-shaped primary action button.",
+      "html": "<button class=\"ds-btn-primary\">Apply now</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: .5em; font: 600 1rem/1 var(--body); color: var(--ink); background: var(--primary); text-decoration: none; border: 2px solid transparent; border-radius: 999px; padding: .95em 1.5em; min-height: 44px; cursor: pointer; transition: background .15s, transform .15s; } .ds-btn-primary:hover { background: var(--primary-hover); } .ds-btn-primary:active { transform: scale(.97); } .ds-btn-primary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined secondary action button.",
+      "html": "<button class=\"ds-btn-secondary\">Learn more</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: .5em; font: 600 1rem/1 var(--body); color: var(--fg); background: transparent; border: 2px solid currentColor; border-radius: 999px; padding: .95em 1.5em; min-height: 44px; cursor: pointer; transition: background .15s, transform .15s; } .ds-btn-secondary:hover { background: var(--tile); } .ds-btn-secondary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }"
+    },
+    {
+      "name": "Segmented Tab Control",
+      "kind": "nav",
+      "refersTo": "pill-toggle",
+      "description": "Tab/filter track used by the calculator tabs and the credit-card filters.",
+      "html": "<div class=\"ds-seg\" role=\"tablist\"><button class=\"ds-seg-btn\" aria-selected=\"true\">Savings</button><button class=\"ds-seg-btn\" aria-selected=\"false\">Mortgage</button></div>",
+      "css": ".ds-seg { display: inline-flex; gap: 6px; background: var(--tile); padding: 5px; border-radius: 999px; } .ds-seg-btn { border: 0; background: transparent; color: var(--muted); font: 600 .95rem var(--body); padding: .65em 1.1em; border-radius: 999px; cursor: pointer; min-height: 44px; } .ds-seg-btn[aria-selected=\"true\"] { background: var(--card); color: var(--fg); box-shadow: 0 1px 3px rgba(0,0,0,.12); } .ds-seg-btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }"
+    },
+    {
+      "name": "Toggle Pill",
+      "kind": "chip",
+      "refersTo": "pill-toggle",
+      "description": "Selectable pill used for application-form step pickers (time at address, card filters).",
+      "html": "<label class=\"ds-pill\"><input type=\"radio\" name=\"ds-demo\" checked><span>1–2 years</span></label>",
+      "css": ".ds-pill { display: flex; align-items: center; gap: 8px; border: 1.5px solid var(--line); border-radius: 999px; padding: 10px 16px; cursor: pointer; font-weight: 600; min-height: 44px; } .ds-pill:has(input:checked) { border-color: var(--primary); background: var(--mint); } .ds-pill input { accent-color: var(--primary); margin: 0; }"
+    },
+    {
+      "name": "Tonal Tile",
+      "kind": "card",
+      "refersTo": "tonal-tile",
+      "description": "The default flat container for grouped content (offers, product tiles, stat tiles).",
+      "html": "<div class=\"ds-tile\"><strong>4.85%</strong><span>AER, compounded monthly</span></div>",
+      "css": ".ds-tile { background: var(--tile); border-radius: 32px; padding: 28px; display: grid; gap: 4px; } .ds-tile strong { font-family: var(--display); font-weight: 900; font-stretch: 88%; font-size: 2rem; line-height: 1; } .ds-tile span { color: var(--muted); font-size: .95rem; }"
+    },
+    {
+      "name": "Bordered Card",
+      "kind": "card",
+      "refersTo": "card-panel",
+      "description": "A lifted white card used inside tonal sections (tip tiles, document links).",
+      "html": "<a class=\"ds-card\" href=\"#\"><strong>Budget planner</strong><span>Plan around the cost of living.</span></a>",
+      "css": ".ds-card { display: flex; flex-direction: column; gap: 10px; padding: 22px; border: 1px solid var(--line); border-radius: 24px; background: var(--card); color: var(--fg); text-decoration: none; transition: border-color .15s, box-shadow .15s; } .ds-card:hover { border-color: var(--primary); box-shadow: 0 14px 30px -22px rgba(2,40,44,.5); } .ds-card span { color: var(--muted); font-size: .95rem; }"
+    },
+    {
+      "name": "Form Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Standard text field with focus and invalid states.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-demo-input\">Email address</label><input id=\"ds-demo-input\" type=\"email\"></div>",
+      "css": ".ds-field { display: grid; gap: 6px; } .ds-field label { font-weight: 600; font-size: .92rem; } .ds-field input { font: 500 1rem var(--body); color: var(--fg); background: var(--card); border: 1.5px solid var(--line); border-radius: 16px; padding: 12px 14px; min-height: 48px; width: 100%; } .ds-field input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(2,97,105,.18); } .ds-field input[aria-invalid=\"true\"] { border-color: var(--err); background: var(--err-bg); }"
+    },
+    {
+      "name": "Drawn Credit Card",
+      "kind": "custom",
+      "refersTo": "card-panel",
+      "description": "Signature CSS-only credit card face at a 1.586 aspect ratio.",
+      "html": "<div class=\"ds-ccard\"><div class=\"ds-ccard-top\"><span class=\"ds-ccard-brand\">SECURBANK</span><div class=\"ds-ccard-chip\"></div></div><div class=\"ds-ccard-bottom\"><span class=\"ds-ccard-num\">•••• •••• •••• 4821</span><span class=\"ds-ccard-name\">CASHBACK</span></div></div>",
+      "css": ".ds-ccard { aspect-ratio: 1.586; width: 320px; border-radius: 18px; padding: 20px 22px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 22px 44px -22px rgba(2,40,44,.55); font-family: var(--body); background: var(--primary); color: #fff; } .ds-ccard::after { content: \"\"; position: absolute; width: 70%; aspect-ratio: 1; border-radius: 50%; right: -22%; top: -40%; border: 28px solid currentColor; opacity: .08; } .ds-ccard-top { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; } .ds-ccard-brand { font-family: var(--display); font-weight: 900; font-stretch: 95%; font-size: 1.05rem; letter-spacing: -.01em; } .ds-ccard-chip { width: 42px; height: 32px; border-radius: 7px; background: #d9c58b; } .ds-ccard-bottom { display: flex; justify-content: space-between; align-items: end; position: relative; z-index: 1; } .ds-ccard-num { font-variant-numeric: tabular-nums; letter-spacing: .14em; font-size: .82rem; opacity: .8; } .ds-ccard-name { font-weight: 700; font-size: .9rem; letter-spacing: .06em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Current Nav Link",
+      "kind": "nav",
+      "refersTo": "pill-toggle-active",
+      "description": "Header nav link in its current-page state.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\" class=\"ds-nav-link\">Credit cards</a><a href=\"#\" class=\"ds-nav-link\">Loans</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 4px; } .ds-nav-link { text-decoration: none; font-weight: 600; color: var(--fg); padding: .55em .9em; border-radius: 999px; } .ds-nav-link:hover { background: var(--tile); } .ds-nav-link[aria-current] { background: var(--mint); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Steady Current",
+    "overview": "SecurBank's visual system is calm, confident forward motion, not stillness. It takes its cue from the hero's own line, \"Sail into financial independence\": one saturated teal runs through the whole site like current under a boat, surfacing in buttons, links, focus rings, and the feature surfaces that carry the most important choice on a page. Everything else sits on flat, tinted panels so that current reads clearly against a quiet background, and numbers (rates, repayments, limits) are the one place the system slows down and gets exact: tabular, aligned, impossible to misread. This system explicitly rejects the generic SaaS-cream fintech look, a cream/off-white background with a single muted-blue accent and a uniform grid of rounded cards, and it equally rejects the dated, bureaucratic high-street bank look of dense navy tables and serif headers. SecurBank is fictitious, but the system is built to feel like a real, self-assured challenger bank: bold uppercase display type for the moments that matter, restrained body type everywhere else, and no decoration that doesn't carry a role.",
+    "keyCharacteristics": [
+      "One confident accent (teal), used deliberately rather than scattered",
+      "Pill shapes everywhere a control is clickable: buttons, tabs, filters, chips, tags",
+      "Flat tonal panels by default; shadows reserved for a short list of floating elements",
+      "Heavy uppercase Archivo for headlines and big numbers; Inter for everything you read",
+      "Tabular numerals wherever a number changes, compares, or lines up in a column"
+    ],
+    "rules": [
+      { "name": "The One Current Rule", "body": "Confident Teal is the only saturated accent in the system. When a second accent color is needed, reach for Bright Teal Accent (a lighter tint of the same hue) before introducing a new hue.", "section": "colors" },
+      { "name": "The Flat-Tile Default Rule", "body": "A section's background panel is Lavender-Grey Tile or Soft Mint Tint, never a bordered white card, unless that panel is meant to read as something sitting on top of the page.", "section": "colors" },
+      { "name": "The Tabular Numbers Rule", "body": "Any number that changes, compares, or lines up in a column (calculator results, rate chips, comparison tables, the estimator, application result figures) is set with font-variant-numeric: tabular-nums. No exceptions.", "section": "typography" },
+      { "name": "The Uppercase-Means-Weight Rule", "body": "Uppercase + Archivo is reserved for headlines and hero numbers. Uppercase in Inter (labels, eyebrows, card names) stays small and letter-spaced; it never substitutes for the display treatment.", "section": "typography" },
+      { "name": "The Floating-Element Rule", "body": "If it's not an overlay, a drawn card, the home calculator, or responding to hover/focus, it doesn't get a shadow. Flat panels stay flat.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every clickable control pill-shaped (border-radius: 999px): buttons, tabs, filters, toggle pills, tags.",
+      "Do set font-variant-numeric: tabular-nums on any number that changes, compares, or lines up (rates, calculator results, tables, estimator output, application result figures).",
+      "Do keep Confident Teal (#026169 light / #4fb8c0 dark) as the only saturated accent, reaching for Bright Teal Accent (#8fd6db) rather than a new hue when a second value is needed.",
+      "Do keep shadows limited to the Shadow Vocabulary's short list, overlays, the home calculator, drawn cards, and hover/focus states, and leave every other flat tile and band shadowless.",
+      "Do maintain 44px minimum touch targets and the 3px Confident Teal :focus-visible outline with 3px offset on every interactive element.",
+      "Do keep the fictitious-bank statement on every page, per PRODUCT.md."
+    ],
+    "donts": [
+      "Don't use border-left or border-right as a colored accent stripe on any card, tile, or callout.",
+      "Don't default to the generic SaaS-cream fintech look, a cream/off-white background, a single muted-blue accent, and a uniform grid of identical rounded cards, per PRODUCT.md's anti-reference.",
+      "Don't swing to the opposite failure mode either: dense navy tables, serif headers, or clip-art icons that read as a dated, bureaucratic bank site.",
+      "Don't add real regulator registration numbers, deposit-protection badges, or similar marks. SecurBank is fictitious; those marks would be misleading, per PRODUCT.md.",
+      "Don't invert dark mode mechanically. Follow the project's actual remapped dark palette (Confident Teal lightens to #4fb8c0, the band darkens to #06292c) rather than a CSS filter or flat color-swap.",
+      "Don't drop the paired error treatment (Alert Red border + Alert Red Tint fill + aria-invalid) when adding new form fields."
+    ]
+  }
+}

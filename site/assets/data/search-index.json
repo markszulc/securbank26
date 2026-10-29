@@ -1,0 +1,14 @@
+[
+  { "title": "Credit cards", "desc": "Compare Cashback, Voyager, Clear and Starter", "kw": "cards compare rewards", "href": "/credit-cards/" },
+  { "title": "SecurBank Cashback", "desc": "1% cashback on all spend, no annual fee", "kw": "credit card rewards cash back supermarket", "href": "/credit-cards/cashback/" },
+  { "title": "SecurBank Voyager", "desc": "Travel points, 0% foreign transaction fees", "kw": "credit card travel points lounge abroad", "href": "/credit-cards/voyager/" },
+  { "title": "SecurBank Clear", "desc": "0% on balance transfers for 24 months", "kw": "credit card low rate balance transfer", "href": "/credit-cards/clear/" },
+  { "title": "SecurBank Starter", "desc": "A first card to build your credit history", "kw": "credit card builder student first", "href": "/credit-cards/starter/" },
+  { "title": "Apply for a credit card", "desc": "About 10 minutes, decision online", "kw": "application apply form", "href": "/credit-cards/apply/" },
+  { "title": "Check your eligibility", "desc": "Soft search, no impact on your credit score", "kw": "eligibility credit score checker", "href": "/credit-cards/#eligibility" },
+  { "title": "Savings calculator", "desc": "High-yield account at 4.85% AER", "kw": "savings interest account calculator", "href": "/#savings-calculator" },
+  { "title": "Mortgage calculator", "desc": "5-year fixed at 5.29% APRC", "kw": "mortgage home loan repayment calculator", "href": "/#mortgage-calculator" },
+  { "title": "Cost of living support", "desc": "Budget planner, payment holidays and help", "kw": "support help budget payment holiday", "href": "/#support" },
+  { "title": "Accounts", "desc": "Current and high-yield savings accounts", "kw": "account savings open", "href": "#" },
+  { "title": "Loans", "desc": "Personal loans and mortgages", "kw": "loan mortgage borrow", "href": "#" }
+]

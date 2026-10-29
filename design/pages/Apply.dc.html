@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Apply for a SecurBank credit card</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,800;62..125,900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+:root{--bg:#ffffff;--fg:#2c2c2c;--muted:#5b5e66;--ink:#ffffff;--lime:#026169;--lime-hover:#3e6470;--pop:#8fd6db;--mint:#e1eff0;--tile:#f3f2f6;--line:#e2e1e8;--band:#023b40;--band-fg:#e1eff0;--card:#ffffff;--focus:#026169;--err:#b3261e;--err-bg:#fbeaea;--display:"Archivo","Arial Black",Impact,system-ui,sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme: dark){.sb[data-theme="auto"]{--bg:#111618;--fg:#eef1f2;--muted:#adb6b9;--ink:#04262a;--lime:#4fb8c0;--lime-hover:#72cad1;--mint:#18302f;--tile:#1a1f22;--line:#2b3438;--band:#06292c;--band-fg:#cfe8ea;--card:#171d20;--focus:#4fb8c0;--err:#ffb4ab;--err-bg:#3a1a18;color-scheme:dark}}
+.sb[data-theme="dark"]{--bg:#111618;--fg:#eef1f2;--muted:#adb6b9;--ink:#04262a;--lime:#4fb8c0;--lime-hover:#72cad1;--mint:#18302f;--tile:#1a1f22;--line:#2b3438;--band:#06292c;--band-fg:#cfe8ea;--card:#171d20;--focus:#4fb8c0;--err:#ffb4ab;--err-bg:#3a1a18;color-scheme:dark}
+*{box-sizing:border-box}
+.sb{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit}a:hover{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:16px;padding-right:16px;width:100%}
+.display{font-family:var(--display);font-weight:900;font-stretch:88%;text-transform:uppercase;line-height:.92;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h2{font-family:var(--body);font-weight:700;font-size:1.5rem;line-height:1.2;margin:0;letter-spacing:-.01em}
+h3{font-family:var(--body);font-weight:700;font-size:1.1rem;line-height:1.25;margin:0}
+p{margin:0}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:600 1rem/1 var(--body);text-decoration:none;border-radius:999px;padding:.95em 1.6em;border:2px solid transparent;cursor:pointer;transition:background .15s,transform .15s;min-height:48px}
+.btn-primary{background:var(--lime);color:var(--ink)}
+.btn-primary:hover{background:var(--lime-hover);color:var(--ink)}
+.btn-secondary{background:transparent;color:var(--fg);border-color:currentColor}
+.btn-secondary:hover{background:var(--tile)}
+.btn:active{transform:scale(.97)}
+.textbtn{background:none;border:0;padding:.4em .2em;font:600 .95rem var(--body);color:var(--fg);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;text-decoration-color:var(--lime);cursor:pointer;min-height:44px}
+
+.hdr{background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:900;font-stretch:95%;font-size:1.45rem;text-decoration:none;letter-spacing:-.02em}
+.logo-mark{color:var(--ink);width:28px;height:28px;border-radius:9px;background:var(--lime);display:grid;place-items:center}
+.secure{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--muted)}
+.nav-end{display:flex;align-items:center;gap:12px}
+.lang{position:relative}
+.lang-btn{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 .8em;border-radius:999px;border:0;background:transparent;color:var(--fg);font:600 .95rem var(--body);cursor:pointer}
+.lang-btn:hover,.lang-btn[aria-expanded="true"]{background:var(--tile)}
+.lang-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:6;list-style:none;margin:0;padding:6px;min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 40px -24px rgba(2,40,44,.45);display:grid;gap:2px}
+.lang-opt{width:100%;display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 12px;text-align:left;border:0;background:transparent;color:var(--fg);font:600 .95rem var(--body);padding:9px 12px;border-radius:12px;cursor:pointer;min-height:44px}
+.lang-opt small{grid-column:1;color:var(--muted);font-weight:500;font-size:.8rem}
+.lang-opt svg{grid-row:1/3;grid-column:2;color:var(--lime)}
+.lang-opt:hover{background:var(--tile)}
+.lang-opt[aria-pressed="true"]{background:var(--mint)}
+@media (max-width:520px){.lang-btn .code{display:none}}
+
+.top{background:var(--mint);padding-block:40px 32px}
+.top h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+.top p{margin-top:10px;max-width:60ch}
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.steps li{display:grid;gap:8px;font-size:.88rem;font-weight:600;color:var(--muted)}
+.steps .bar{height:6px;border-radius:999px;background:rgba(2,97,105,.18)}
+.steps li[data-state="done"] .bar,.steps li[data-state="current"] .bar{background:var(--lime)}
+.steps li[data-state="current"]{color:var(--fg)}
+@media (max-width:600px){.steps li span{display:none}.steps li[data-state="current"] span{display:inline}}
+
+.layout{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;padding-block:40px 72px}
+.form-col{flex:999 1 560px;min-width:0;display:grid;gap:24px}
+.side{flex:1 1 300px;min-width:0;display:grid;gap:16px}
+
+.panel{border:1px solid var(--line);border-radius:28px;padding:clamp(20px,4vw,32px);display:grid;gap:20px}
+.panel-head{display:grid;gap:4px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+.f{display:grid;gap:6px;min-width:0}
+.f label,.f .lab{font-weight:600;font-size:.92rem}
+.f .hint{font-size:.82rem;color:var(--muted)}
+.f input,.f select{font:500 1rem var(--body);color:var(--fg);background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;min-height:48px;width:100%;min-width:0}
+.f input:focus,.f select:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px rgba(2,97,105,.18)}
+.f input[aria-invalid="true"]{border-color:var(--err);background:var(--err-bg)}
+.money{position:relative}
+.money span{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-weight:600;color:var(--muted)}
+.money input{padding-left:30px}
+
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.cards{grid-template-columns:1fr}}
+.opt{display:flex;gap:14px;align-items:center;border:1.5px solid var(--line);border-radius:18px;padding:14px 16px;cursor:pointer;min-height:64px}
+.opt:hover{border-color:var(--muted)}
+.opt:has(input:checked){border-color:var(--lime);background:var(--mint);box-shadow:0 0 0 1px var(--lime)}
+.opt input{width:20px;height:20px;accent-color:var(--lime);flex:none;margin:0}
+.opt .mini{width:52px;aspect-ratio:1.586;border-radius:6px;flex:none}
+.opt b{display:block;font-size:.98rem}
+.opt small{color:var(--muted);font-size:.82rem}
+.k-cash{background:#026169}.k-voy{background:#14181a}.k-clear{background:#f3f2f6;border:1px solid #c9c8d0}.k-start{background:#8fd6db}
+
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:999px;padding:10px 16px;cursor:pointer;font-weight:600;min-height:44px}
+.pill:has(input:checked){border-color:var(--lime);background:var(--mint)}
+.pill input{accent-color:var(--lime);margin:0}
+
+.errbox{border:2px solid var(--err);background:var(--err-bg);border-radius:20px;padding:16px 20px;display:grid;gap:6px}
+.errbox strong{color:var(--err)}
+.errbox ul{margin:0;padding-left:1.2em;font-weight:600}
+
+.review{display:grid;gap:12px}
+.rv{border:1px solid var(--line);border-radius:20px;padding:18px 20px;display:grid;gap:10px}
+.rv-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.rv dl{margin:0;display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:8px 16px;font-size:.95rem}
+.rv dt{color:var(--muted)}
+.rv dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+@media (max-width:520px){.rv dl{grid-template-columns:1fr}.rv dd{margin-bottom:6px}}
+.consent{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:16px;background:var(--tile);cursor:pointer}
+.consent input{width:22px;height:22px;accent-color:var(--lime);flex:none;margin:2px 0 0}
+
+.nav-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+
+.sumcard{background:var(--tile);border-radius:28px;padding:24px;display:grid;gap:14px}
+.sumcard .ccard{aspect-ratio:1.586;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;color:#ffffff;max-width:260px}
+.sumcard .ccard.k-clear{color:#2c2c2c}.sumcard .ccard.k-start{color:#04262a}.sumcard .ccard.k-voy{color:#e1eff0}
+.sumcard .brand{font-family:var(--display);font-weight:900;font-stretch:95%;font-size:.9rem}
+.sumcard .cname{font-weight:700;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;align-self:flex-end}
+.sumrows{display:grid;gap:8px;font-size:.95rem}
+.sumrows div{display:flex;justify-content:space-between;gap:12px}
+.sumrows span{color:var(--muted)}
+.help{border:1px solid var(--line);border-radius:24px;padding:20px;display:grid;gap:10px;font-size:.95rem}
+.help ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.help li{display:flex;gap:10px;align-items:flex-start}
+.help svg{flex:none;margin-top:2px;color:var(--lime)}
+
+.done{display:grid;gap:24px;justify-items:start}
+.done-badge{width:72px;height:72px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center}
+.done h2{font-family:var(--display);font-weight:900;font-stretch:88%;text-transform:uppercase;font-size:clamp(2.2rem,5vw,3.4rem);line-height:.95}
+.done-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%}
+@media (max-width:640px){.done-facts{grid-template-columns:1fr}}
+.done-facts div{background:var(--tile);border-radius:20px;padding:18px;display:grid;gap:4px}
+.done-facts b{font-family:var(--display);font-weight:900;font-stretch:88%;font-size:1.8rem;line-height:1;font-variant-numeric:tabular-nums}
+.done-facts span{color:var(--muted);font-size:.88rem}
+.next{margin:0;padding-left:1.3em;display:grid;gap:8px}
+
+.ftr{border-top:1px solid var(--line);padding-block:32px;color:var(--muted);font-size:.88rem;margin-top:auto}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</helmet>
+<div class="sb" data-theme="{{theme}}">
+
+<header class="hdr">
+  <div class="wrap nav">
+    <a class="logo" href="Main.dc.html" aria-label="SecurBank home">
+      <svg width="103" height="36" viewBox="0 0 191.5 67.1" aria-hidden="true" style="display: block"><g fill="currentColor"><path d="M110.6,23.2c0-0.3,0.1-0.4,0.3-0.4c0.8,0,3.8-0.1,8.1-0.1c8.1,0,9.6,3.7,9.6,6.3c0,2.4-1.2,3.9-2.2,4.6c1,0.5,3.2,2.1,3.2,5.4c0,4.6-4,7.3-10.7,7.3c-2.7,0-6.9-0.1-8.1-0.1c-0.2,0-0.3-0.1-0.3-0.4L110.6,23.2L110.6,23.2z M116.8,31.5h2.7c1,0,2,0.1,2.4,0.1c0.4-0.5,0.6-1.1,0.6-1.8c0-0.9-0.3-2.3-3.2-2.3c-0.9,0-1.9,0-2.5,0.1V31.5z M116.8,41.1c0.6,0,1.7,0.1,2.7,0.1c2.4,0,3.7-0.8,3.7-2.3s-1.1-2.3-3.8-2.3h-2.6C116.8,36.6,116.8,41.1,116.8,41.1z"></path><path d="M148.2,41.4c0,1.1,0,2,0.1,3c0,0,0,0.1-0.1,0.1c-2.8,1.2-5.8,1.9-8.7,1.9c-4.2,0-7.7-1.7-7.7-6.1c0-3.8,3.3-5.9,8.4-5.9c0.8,0,1.6,0,2,0v-0.2c0-0.5-0.5-1.7-3.2-1.7c-1.7,0-3.5,0.5-5,1.1c-0.2,0.1-0.4,0-0.4-0.2v-4.1c0-0.2,0-0.4,0.3-0.5c1.8-0.8,4.3-1.2,6.3-1.2c5.4,0,7.9,3.1,7.9,7.4L148.2,41.4L148.2,41.4z M142.1,38.5c-0.3,0-0.6-0.1-1.6-0.1c-1.7,0-2.7,0.7-2.7,1.8c0,1.2,0.9,1.9,2.6,1.9c0.6,0,1.3-0.1,1.7-0.3V38.5z"></path><path d="M151.8,32.3c0-1.2-0.1-3-0.1-3.9c0-0.2,0-0.4,0.3-0.4h4.8c0.4,0,0.5,0.1,0.6,0.3c0.1,0.3,0.2,0.6,0.3,1c1.5-1.1,3.2-1.6,5-1.6c2.9,0,6.3,1.7,6.3,7.4v10.6c0,0.3-0.1,0.4-0.4,0.4h-5.5c-0.3,0-0.4-0.1-0.4-0.4V35.2c0-1.6-0.8-2.5-2.2-2.5c-0.8,0-1.5,0.3-2.2,0.8v12.2c0,0.3-0.1,0.4-0.4,0.4h-5.5c-0.3,0-0.4-0.1-0.4-0.4V32.3H151.8z"></path><path d="M190.1,28c0.3,0,0.4,0.2,0.2,0.5c-1.1,1.6-5,6-6.2,7.6c-0.1,0.1-0.1,0.2,0,0.3c1.9,2.5,4.9,6.6,6.9,9.3c0.1,0.2,0,0.4-0.3,0.4h-7c-0.3,0-0.4-0.1-0.5-0.3l-4.5-6.9v6.8c0,0.3-0.1,0.4-0.4,0.4h-5.5c-0.3,0-0.4-0.1-0.4-0.4V21.2c0-0.2,0-0.3,0.3-0.3h5.6c0.3,0,0.4,0.1,0.4,0.3v14.4l5.2-7.2c0.1-0.3,0.2-0.3,0.5-0.3L190.1,28L190.1,28z"></path></g><path fill="#0296A6" d="M10.2,0.3h87.7c5.6,0,10.2,4.1,10.2,9.3l0,0v48.3c0,5.1-4.6,9.3-10.2,9.3H10.2C4.6,67.2,0,62.9,0,57.8V9.5C0,4.4,4.6,0.3,10.2,0.3L10.2,0.3z"></path><path fill="#FFFFFF" d="M20.8,46.2c5.8,0,10.1-2.5,10.1-7.4c0-3.1-1.1-5.4-6.3-7.3L23,31c-2.8-1-3.1-1.6-3.1-2.3c0-0.8,0.7-1.6,3-1.6c2.1-0.1,4.2,0.4,6.1,1.3c0.3,0.1,0.4-0.1,0.4-0.2v-5c0-0.3-0.1-0.4-0.3-0.5c-1.9-0.7-3.9-1-5.9-0.9c-6.7,0-9.5,3.7-9.5,7.4c0,3.3,1.8,5.5,5.9,7.1l1.7,0.7c2.5,1,3.1,1.4,3.1,2.3c0,0.9-0.8,1.5-3.1,1.5c-2.5,0-5-0.7-7.2-1.9c-0.2-0.1-0.4,0-0.4,0.2v5.2c0,0.3,0.1,0.5,0.3,0.7C16.2,45.9,18.5,46.3,20.8,46.2z M46.3,38.4c1.3,0,2.5,0,3.8-0.1c0.2,0,0.3-0.1,0.3-0.3c0.1-0.8,0.2-1.7,0.2-2.5c0-3.9-2.3-8.2-8.3-8.2c-6.2,0-9.2,4.7-9.2,9.7c0,4.5,2.6,9.2,9.8,9.2c2,0.1,4.1-0.3,5.9-1c0.2-0.1,0.3-0.2,0.3-0.5v-4c0-0.3-0.1-0.3-0.2-0.2c-1.5,0.5-3,0.8-4.6,0.8c-3.2,0-4.5-1.3-4.7-2.7h6.7V38.4z M39.6,34.3c0-1.4,1.1-2.6,2.5-2.6h0.1c1.3,0,2.4,1,2.4,2.2c0,0.1,0,0.2,0,0.3c-0.5,0.1-1,0.1-1.5,0.1H39.6z M67.1,40.9c0-0.1-0.1-0.3-0.3-0.2C66,40.9,65.2,41,64.3,41c-2.6,0-4.9-1.3-4.9-4.4c0-2.7,1.7-4.4,4.7-4.4c0.9,0,1.8,0.1,2.6,0.3c0.2,0.1,0.3,0,0.3-0.3l0.1-4.3c0-0.3,0-0.3-0.2-0.4c-1.1-0.3-2.2-0.4-3.3-0.4c-6.5,0-10.8,4-10.8,9.6c0,5.5,3.9,9.4,10,9.4c1.4,0.1,2.7-0.1,4-0.5c0.2-0.1,0.2-0.2,0.2-0.4L67.1,40.9z M87.2,27.9c0-0.3-0.1-0.3-0.3-0.3h-5.7c-0.3,0-0.4,0.1-0.4,0.3v12.3c-0.6,0.5-1.3,0.8-2.1,0.8c-1.7,0-2.2-1.1-2.2-2.8V27.9c0-0.3-0.1-0.3-0.3-0.3h-5.7c-0.3,0-0.4,0.1-0.4,0.3v11.2c0,5.3,2.9,7.1,6.5,7.1c1.7,0.1,3.4-0.4,4.8-1.5c0.1,0.3,0.1,0.6,0.3,0.8c0.1,0.2,0.2,0.3,0.5,0.3H87c0.3,0,0.4-0.1,0.4-0.3c-0.1-1.3-0.2-2.6-0.2-3.8L87.2,27.9z M91.3,27.5c-0.2,0-0.3,0.1-0.3,0.3c0.1,1.5,0.2,3.6,0.2,5.2v12.4c0,0.3,0.1,0.4,0.4,0.4h5.6c0.3,0,0.4-0.1,0.4-0.4V35.3c1.1-1.2,3.5-1.8,5.6-1.7c0.3,0,0.4-0.1,0.4-0.4v-5.7c0-0.3-0.1-0.3-0.3-0.3c-2.3,0.1-4.5,1.2-5.9,3.1c-0.1-0.8-0.2-1.6-0.5-2.3c-0.1-0.3-0.2-0.4-0.5-0.4L91.3,27.5z"></path></svg>
+    </a>
+    <div class="nav-end">
+    <div class="lang" onKeyDown="{{onLangKey}}">
+      <button type="button" class="lang-btn" aria-label="{{langLabel}}" aria-expanded="{{langExp}}" aria-controls="sb-lang" onClick="{{toggleLang}}">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg>
+        <span class="code">{{langCode}}</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+      </button>
+      <sc-if value="{{langOpen}}" hint-placeholder-val="{{ false }}">
+        <ul class="lang-menu" id="sb-lang" aria-label="Choose a language">
+          <sc-for list="{{langs}}" as="l" hint-placeholder-count="8">
+            <li><button type="button" class="lang-opt" lang="{{l.code}}" aria-pressed="{{l.sel}}" onClick="{{l.pick}}"><span>{{l.name}}</span><small>{{l.region}}</small><sc-if value="{{l.isSel}}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"></path></svg></sc-if></button></li>
+          </sc-for>
+        </ul>
+      </sc-if>
+    </div>
+    <span class="secure"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 018 0v4"></path></svg>Secure application</span>
+    </div>
+  </div>
+</header>
+
+<main style="display: block">
+  <div class="top">
+    <div class="wrap">
+      <h1 class="display">Apply for a credit card</h1>
+      <p class="muted">About 10 minutes. We'll save your progress as you go.</p>
+      <sc-if value="{{inForm}}" hint-placeholder-val="{{ true }}">
+        <ol class="steps" aria-label="Application progress">
+          <sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+            <li data-state="{{s.state}}" aria-current="{{s.current}}"><div class="bar"></div><span>{{s.label}}</span></li>
+          </sc-for>
+        </ol>
+      </sc-if>
+    </div>
+  </div>
+
+  <div class="wrap layout">
+    <div class="form-col">
+
+      <sc-if value="{{showErr}}" hint-placeholder-val="{{ false }}">
+        <div class="errbox" role="alert">
+          <strong>Please fix the following to continue</strong>
+          <ul><sc-for list="{{missing}}" as="m" hint-placeholder-count="2"><li>{{m.label}}</li></sc-for></ul>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{s1}}" hint-placeholder-val="{{ true }}">
+        <div class="panel">
+          <div class="panel-head"><h2>Choose your card</h2><p class="muted">You can only hold one of each card.</p></div>
+          <div class="cards" role="radiogroup" aria-label="Card">
+            <label class="opt"><input type="radio" name="card" value="cashback" checked="{{sel.cashback}}" onChange="{{on.card}}"><span class="mini k-cash" aria-hidden="true"></span><span><b>Cashback</b><small>1% cashback · £0 fee</small></span></label>
+            <label class="opt"><input type="radio" name="card" value="voyager" checked="{{sel.voyager}}" onChange="{{on.card}}"><span class="mini k-voy" aria-hidden="true"></span><span><b>Voyager</b><small>Travel points · £95 fee</small></span></label>
+            <label class="opt"><input type="radio" name="card" value="clear" checked="{{sel.clear}}" onChange="{{on.card}}"><span class="mini k-clear" aria-hidden="true"></span><span><b>Clear</b><small>0% balance transfers · £0 fee</small></span></label>
+            <label class="opt"><input type="radio" name="card" value="starter" checked="{{sel.starter}}" onChange="{{on.card}}"><span class="mini k-start" aria-hidden="true"></span><span><b>Starter</b><small>Build credit · £0 fee</small></span></label>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h2>About you</h2><p class="muted">Use your name as it appears on your ID.</p></div>
+          <div class="grid3">
+            <div class="f"><label for="ap-title">Title</label>
+              <select id="ap-title" value="{{f.title}}" onChange="{{on.title}}"><option value="">Select</option><option>Mr</option><option>Mrs</option><option>Ms</option><option>Mx</option><option>Dr</option></select></div>
+            <div class="f"><label for="ap-first">First name</label><input id="ap-first" autocomplete="given-name" value="{{f.first}}" onChange="{{on.first}}" aria-invalid="{{inv.first}}"></div>
+            <div class="f"><label for="ap-last">Last name</label><input id="ap-last" autocomplete="family-name" value="{{f.last}}" onChange="{{on.last}}" aria-invalid="{{inv.last}}"></div>
+          </div>
+          <div class="grid2">
+            <div class="f"><label for="ap-dob">Date of birth</label><span class="hint">You must be 18 or over</span><input id="ap-dob" type="date" autocomplete="bday" value="{{f.dob}}" onChange="{{on.dob}}" aria-invalid="{{inv.dob}}"></div>
+            <div class="f"><label for="ap-mobile">Mobile number</label><span class="hint">We'll text you a code to confirm</span><input id="ap-mobile" type="tel" autocomplete="tel" value="{{f.mobile}}" onChange="{{on.mobile}}" aria-invalid="{{inv.mobile}}"></div>
+          </div>
+          <div class="f"><label for="ap-email">Email address</label><input id="ap-email" type="email" autocomplete="email" value="{{f.email}}" onChange="{{on.email}}" aria-invalid="{{inv.email}}"></div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{s2}}" hint-placeholder-val="{{ false }}">
+        <div class="panel">
+          <div class="panel-head"><h2>Your home</h2><p class="muted">Where you live now.</p></div>
+          <div class="f"><label for="ap-addr">Address line 1</label><input id="ap-addr" autocomplete="address-line1" value="{{f.address1}}" onChange="{{on.address1}}" aria-invalid="{{inv.address1}}"></div>
+          <div class="f"><label for="ap-addr2">Address line 2 <span class="muted" style="font-weight: 500">(optional)</span></label><input id="ap-addr2" autocomplete="address-line2" value="{{f.address2}}" onChange="{{on.address2}}"></div>
+          <div class="grid2">
+            <div class="f"><label for="ap-town">Town or city</label><input id="ap-town" autocomplete="address-level2" value="{{f.town}}" onChange="{{on.town}}" aria-invalid="{{inv.town}}"></div>
+            <div class="f"><label for="ap-pc">Postcode</label><input id="ap-pc" autocomplete="postal-code" value="{{f.postcode}}" onChange="{{on.postcode}}" aria-invalid="{{inv.postcode}}"></div>
+          </div>
+          <div class="f"><span class="lab" id="ap-years-l">How long have you lived here?</span>
+            <div class="pills" role="radiogroup" aria-labelledby="ap-years-l">
+              <label class="pill"><input type="radio" name="years" value="lt1" checked="{{yrs.lt1}}" onChange="{{on.years}}">Under 1 year</label>
+              <label class="pill"><input type="radio" name="years" value="1to3" checked="{{yrs.y13}}" onChange="{{on.years}}">1 to 3 years</label>
+              <label class="pill"><input type="radio" name="years" value="3plus" checked="{{yrs.y3}}" onChange="{{on.years}}">3 years or more</label>
+            </div>
+          </div>
+          <div class="f"><label for="ap-res">Residential status</label>
+            <select id="ap-res" value="{{f.housing}}" onChange="{{on.housing}}"><option value="own">Homeowner with mortgage</option><option value="outright">Homeowner, no mortgage</option><option value="rent">Renting</option><option value="family">Living with family</option></select></div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{s3}}" hint-placeholder-val="{{ false }}">
+        <div class="panel">
+          <div class="panel-head"><h2>Your finances</h2><p class="muted">This helps us lend responsibly and set your credit limit.</p></div>
+          <div class="grid2">
+            <div class="f"><label for="ap-emp">Employment status</label>
+              <select id="ap-emp" value="{{f.emp}}" onChange="{{on.emp}}"><option value="employed">Employed</option><option value="self">Self-employed</option><option value="retired">Retired</option><option value="student">Student</option><option value="other">Other</option></select></div>
+            <div class="f"><label for="ap-employer">Employer or occupation <span class="muted" style="font-weight: 500">(optional)</span></label><input id="ap-employer" value="{{f.employer}}" onChange="{{on.employer}}"></div>
+          </div>
+          <div class="grid2">
+            <div class="f"><label for="ap-income">Annual income before tax</label><span class="hint">Include salary, pension and benefits</span><div class="money"><span aria-hidden="true">£</span><input id="ap-income" inputmode="decimal" value="{{f.income}}" onChange="{{on.income}}" aria-invalid="{{inv.income}}"></div></div>
+            <div class="f"><label for="ap-hc">Monthly rent or mortgage</label><span class="hint">Your share only. Enter 0 if none</span><div class="money"><span aria-hidden="true">£</span><input id="ap-hc" inputmode="decimal" value="{{f.housingCost}}" onChange="{{on.housingCost}}"></div></div>
+          </div>
+          <div class="f"><span class="lab" id="ap-bt-l">Do you want to transfer a balance from another card?</span>
+            <div class="pills" role="radiogroup" aria-labelledby="ap-bt-l">
+              <label class="pill"><input type="radio" name="bt" value="no" checked="{{bt.no}}" onChange="{{on.bt}}">No</label>
+              <label class="pill"><input type="radio" name="bt" value="yes" checked="{{bt.yes}}" onChange="{{on.bt}}">Yes, after I'm approved</label>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{s4}}" hint-placeholder-val="{{ false }}">
+        <div class="panel">
+          <div class="panel-head"><h2>Check your answers</h2><p class="muted">Make sure everything is right before you submit.</p></div>
+          <div class="review">
+            <div class="rv">
+              <div class="rv-head"><h3>About you</h3><button type="button" class="textbtn" onClick="{{goto1}}">Edit<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)"> about you</span></button></div>
+              <dl><dt>Card</dt><dd>{{cardName}}</dd><dt>Name</dt><dd>{{fullName}}</dd><dt>Date of birth</dt><dd>{{f.dob}}</dd><dt>Email</dt><dd>{{f.email}}</dd><dt>Mobile</dt><dd>{{f.mobile}}</dd></dl>
+            </div>
+            <div class="rv">
+              <div class="rv-head"><h3>Your home</h3><button type="button" class="textbtn" onClick="{{goto2}}">Edit<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)"> your home</span></button></div>
+              <dl><dt>Address</dt><dd>{{addressText}}</dd><dt>Time at address</dt><dd>{{yearsText}}</dd><dt>Residential status</dt><dd>{{housingText}}</dd></dl>
+            </div>
+            <div class="rv">
+              <div class="rv-head"><h3>Your finances</h3><button type="button" class="textbtn" onClick="{{goto3}}">Edit<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)"> your finances</span></button></div>
+              <dl><dt>Employment</dt><dd>{{empText}}</dd><dt>Annual income</dt><dd>{{incomeText}}</dd><dt>Monthly housing cost</dt><dd>{{hcText}}</dd><dt>Balance transfer</dt><dd>{{btText}}</dd></dl>
+            </div>
+          </div>
+          <label class="consent"><input type="checkbox" checked="{{f.c1}}" onChange="{{on.c1}}" aria-invalid="{{inv.c1}}"><span>I've read the <a class="textbtn" style="padding: 0; min-height: 0" href="CardDetails.dc.html">summary box and pre-contract information</a>, and I agree to the terms and conditions.</span></label>
+          <label class="consent"><input type="checkbox" checked="{{f.c2}}" onChange="{{on.c2}}" aria-invalid="{{inv.c2}}"><span>I agree that SecurBank can run a full credit search, which will show on my credit file.</span></label>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{inForm}}" hint-placeholder-val="{{ true }}">
+        <div class="nav-row">
+          <sc-if value="{{canBack}}" hint-placeholder-val="{{ false }}"><button type="button" class="btn btn-secondary" onClick="{{back}}">Back</button></sc-if>
+          <sc-if value="{{noBack}}" hint-placeholder-val="{{ true }}"><a class="textbtn" href="CardDetails.dc.html">Back to card details</a></sc-if>
+          <button type="button" class="btn btn-primary" onClick="{{next}}">{{nextText}}</button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{s5}}" hint-placeholder-val="{{ false }}">
+        <div class="panel done" aria-live="polite">
+          <span class="done-badge" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <h2>You're approved, {{f.first}}</h2>
+          <p class="muted" style="max-width: 56ch">Your {{cardName}} card is on its way. You can add it to your mobile wallet and start using it right now.</p>
+          <div class="done-facts">
+            <div><b>{{limitText}}</b><span>credit limit</span></div>
+            <div><b>{{cardApr}}</b><span>APR representative (variable)</span></div>
+            <div><b>{{ref}}</b><span>application reference</span></div>
+          </div>
+          <h3>What happens next</h3>
+          <ol class="next">
+            <li>We'll email your agreement to {{f.email}} to keep.</li>
+            <li>Your card arrives in 3 to 5 working days.</li>
+            <li>Download the SecurBank app to manage your card and set up payments.</li>
+          </ol>
+          <div class="nav-row" style="width: 100%">
+            <a class="btn btn-primary" href="Main.dc.html">Back to SecurBank home</a>
+            <button type="button" class="textbtn" onClick="{{restart}}">Start another application</button>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <aside class="side" aria-label="Your application">
+      <div class="sumcard">
+        <h3>You're applying for</h3>
+        <div class="ccard {{cardCls}}"><span class="brand">SecurBank</span><span class="cname">{{cardShort}}</span></div>
+        <div class="sumrows">
+          <div><span>Card</span><strong>{{cardName}}</strong></div>
+          <div><span>Representative APR</span><strong>{{cardApr}}</strong></div>
+          <div><span>Annual fee</span><strong>{{cardFee}}</strong></div>
+        </div>
+        <a class="textbtn" style="justify-self: start" href="CardDetails.dc.html">See card details</a>
+      </div>
+      <div class="help">
+        <h3>Good to know</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"></path></svg>Your progress is saved for 30 days.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"></path></svg>We only run a full credit search when you submit.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"></path></svg>Need help? Chat with us 24/7 in the app.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="ftr">
+  <div class="wrap"><p>SecurBank is a fictitious bank used for demonstrating Adobe technology. This form is a design prototype and does not send your details anywhere.</p></div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark","auto"],"default":"light"},"$preview":{"width":1440,"height":1700}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { step: 1, showErr: false, f: this.blank() };
+  }
+  blank() {
+    return { card: 'cashback', title: '', first: '', last: '', dob: '', email: '', mobile: '', address1: '', address2: '', town: '', postcode: '', years: '3plus', housing: 'own', emp: 'employed', employer: '', income: '', housingCost: '', bt: 'no', c1: false, c2: false };
+  }
+  required() {
+    return {
+      1: [['first', 'Enter your first name'], ['last', 'Enter your last name'], ['dob', 'Enter your date of birth'], ['email', 'Enter your email address'], ['mobile', 'Enter your mobile number']],
+      2: [['address1', 'Enter the first line of your address'], ['town', 'Enter your town or city'], ['postcode', 'Enter your postcode']],
+      3: [['income', 'Enter your annual income']],
+      4: [['c1', 'Confirm you agree to the terms'], ['c2', 'Confirm we can run a credit search']]
+    }[this.state.step] || [];
+  }
+  missing() {
+    var f = this.state.f;
+    return this.required().filter(function (r) { var v = f[r[0]]; return v === false || String(v).trim() === ''; });
+  }
+  next() {
+    if (this.missing().length) { this.setState({ showErr: true }); return; }
+    this.setState({ step: this.state.step + 1, showErr: false });
+  }
+  num(v) { var n = parseFloat(String(v).replace(/[^0-9.]/g, '')); return isFinite(n) ? n : 0; }
+  langVals() {
+    var list = [
+      { code: 'en-GB', short: 'EN', name: 'English', region: 'United Kingdom' },
+      { code: 'fr', short: 'FR', name: 'Français', region: 'France' },
+      { code: 'de', short: 'DE', name: 'Deutsch', region: 'Deutschland' },
+      { code: 'es', short: 'ES', name: 'Español', region: 'España' },
+      { code: 'it', short: 'IT', name: 'Italiano', region: 'Italia' },
+      { code: 'ja', short: 'JA', name: '日本語', region: '日本' },
+      { code: 'ko', short: 'KO', name: '한국어', region: '대한민국' },
+      { code: 'zh-Hans', short: '中文', name: '简体中文', region: '中国大陆' }
+    ];
+    var curCode = this.state.lang || 'en-GB';
+    var cur = list.filter(function (l) { return l.code === curCode; })[0] || list[0];
+    var open = !!this.state.langOpen;
+    return {
+      langOpen: open, langExp: String(open),
+      langCode: cur.short,
+      langLabel: 'Language: ' + cur.name + '. Change language',
+      toggleLang: () => this.setState({ langOpen: !this.state.langOpen }),
+      onLangKey: (e) => { if (e.key === 'Escape') this.setState({ langOpen: false }); },
+      langs: list.map((l) => Object.assign({}, l, {
+        sel: String(l.code === cur.code), isSel: l.code === cur.code,
+        pick: () => this.setState({ lang: l.code, langOpen: false })
+      }))
+    };
+  }
+  renderVals() {
+    var st = this.state, f = st.f, step = st.step;
+    var cards = {
+      cashback: { name: 'SecurBank Cashback', short: 'Cashback', cls: 'k-cash', apr: '24.9%', fee: '£0', max: 15000 },
+      voyager: { name: 'SecurBank Voyager', short: 'Voyager', cls: 'k-voy', apr: '29.9%', fee: '£95', max: 25000 },
+      clear: { name: 'SecurBank Clear', short: 'Clear', cls: 'k-clear', apr: '21.9%', fee: '£0', max: 10000 },
+      starter: { name: 'SecurBank Starter', short: 'Starter', cls: 'k-start', apr: '34.9%', fee: '£0', max: 1500 }
+    };
+    var c = cards[f.card] || cards.cashback;
+    var on = {};
+    var self = this;
+    Object.keys(this.blank()).forEach(function (k) {
+      on[k] = function (e) {
+        var v = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+        var nf = Object.assign({}, self.state.f); nf[k] = v;
+        self.setState({ f: nf });
+      };
+    });
+    var miss = this.missing();
+    var inv = {};
+    if (st.showErr) miss.forEach(function (m) { inv[m[0]] = 'true'; });
+    var labels = ['Your card and details', 'Your home', 'Your finances', 'Check and submit'];
+    var gbp = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 });
+    var inc = this.num(f.income);
+    var limit = Math.max(250, Math.min(c.max, Math.round(inc * 0.15 / 250) * 250));
+    var go = function (n) { return function () { self.setState({ step: n, showErr: false }); }; };
+    return {
+      theme: this.props.theme ?? 'light',
+      ...this.langVals(),
+      f: f, on: on, inv: inv,
+      sel: { cashback: f.card === 'cashback', voyager: f.card === 'voyager', clear: f.card === 'clear', starter: f.card === 'starter' },
+      yrs: { lt1: f.years === 'lt1', y13: f.years === '1to3', y3: f.years === '3plus' },
+      bt: { no: f.bt === 'no', yes: f.bt === 'yes' },
+      steps: labels.map(function (l, i) { var n = i + 1; return { label: l, state: n < step ? 'done' : n === step ? 'current' : 'todo', current: n === step ? 'step' : 'false' }; }),
+      s1: step === 1, s2: step === 2, s3: step === 3, s4: step === 4, s5: step === 5,
+      inForm: step < 5, canBack: step > 1 && step < 5, noBack: step === 1,
+      showErr: st.showErr && miss.length > 0,
+      missing: miss.map(function (m) { return { label: m[1] }; }),
+      nextText: step === 4 ? 'Submit application' : 'Continue',
+      next: function () { self.next(); },
+      back: function () { self.setState({ step: Math.max(1, step - 1), showErr: false }); },
+      goto1: go(1), goto2: go(2), goto3: go(3),
+      restart: function () { self.setState({ step: 1, showErr: false, f: self.blank() }); },
+      cardName: c.name, cardShort: c.short, cardCls: c.cls, cardApr: c.apr, cardFee: c.fee,
+      fullName: [f.title, f.first, f.last].filter(Boolean).join(' '),
+      addressText: [f.address1, f.address2, f.town, f.postcode].filter(Boolean).join(', '),
+      yearsText: { lt1: 'Under 1 year', '1to3': '1 to 3 years', '3plus': '3 years or more' }[f.years],
+      housingText: { own: 'Homeowner with mortgage', outright: 'Homeowner, no mortgage', rent: 'Renting', family: 'Living with family' }[f.housing],
+      empText: { employed: 'Employed', self: 'Self-employed', retired: 'Retired', student: 'Student', other: 'Other' }[f.emp] + (f.employer ? ' · ' + f.employer : ''),
+      incomeText: gbp.format(inc),
+      hcText: gbp.format(this.num(f.housingCost)),
+      btText: f.bt === 'yes' ? 'Yes, after approval' : 'No',
+      limitText: gbp.format(limit),
+      ref: 'SB-' + (240000 + (f.last.length * 7919 + f.first.length * 104729) % 99999)
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!--@ {
+  "out": "index.html",
+  "title": "SecurBank: mortgages, credit cards and high-yield savings",
+  "description": "Mortgages, credit cards and high-yield savings, with a 100% online application and no hidden fees.",
+  "css": "home", "js": "home", "nav": "home"
+} -->
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <h1 class="display">Sail into <span class="hl">financial</span> independence</h1>
+        <p class="lede">It's easy with us. Mortgages, credit cards and high-yield savings, with a 100% online application and no hidden fees.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#">Open an account in minutes</a>
+          <a class="btn btn-secondary" href="#">Get a mortgage offer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="hero-follow">
+      <div class="calc" id="calculator" role="group" aria-label="Savings and mortgage calculator" data-calc>
+        <div class="calc-tabs" role="tablist" aria-label="Calculator type">
+          <button type="button" role="tab" id="calc-tab-save" aria-selected="true" aria-controls="calc-panel" data-mode="save">Savings</button>
+          <button type="button" role="tab" id="calc-tab-loan" aria-selected="false" aria-controls="calc-panel" tabindex="-1" data-mode="loan">Mortgage</button>
+        </div>
+        <div id="calc-panel" role="tabpanel" aria-labelledby="calc-tab-save">
+          <div class="rate-line"><span data-out="rateLabel">High-yield account</span><span class="rate-chip" data-out="rateChip">4.85% AER</span></div>
+          <div class="field">
+            <label for="sb-amount" data-out="amountLabel">You deposit</label>
+            <input id="sb-amount" inputmode="decimal" autocomplete="off" value="10,000">
+            <span class="unit">GBP</span>
+          </div>
+          <div class="field">
+            <label for="sb-term" data-out="termLabel">For</label>
+            <select id="sb-term">
+              <option value="1">1 year</option>
+              <option value="3" selected>3 years</option>
+              <option value="5">5 years</option>
+              <option value="25">25 years</option>
+            </select>
+          </div>
+          <div class="result" aria-live="polite">
+            <div class="row"><span data-out="r1Label">Interest earned</span><strong data-out="r1">£1,563.52</strong></div>
+            <div class="row"><span>Monthly fees</span><strong>£0.00</strong></div>
+            <div class="row big"><span data-out="r2Label">Balance at end of term</span><strong data-out="r2">£11,563.52</strong></div>
+          </div>
+          <a class="btn btn-primary" href="#" data-out="cta">Start saving</a>
+        </div>
+        <small>Example rates for a fictitious bank, for illustration only. Interest compounds monthly.</small>
+      </div>
+
+      <div class="trust">
+        <div><b>100% online</b><span>Apply from your phone in about 10 minutes</span></div>
+        <div><b>No hidden fees</b><span>What you see on the offer is what you pay</span></div>
+        <div><b>Flexible terms</b><span>Repayment schedules shaped around your needs</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Popular offers<br>and services</h2>
+        <p class="lede">Everything your household or business needs, from the first account to the family home.</p>
+      </div>
+      <div class="offers">
+        <article class="offer">
+          <div class="art"><img src="/assets/images/mortgage.webp" alt="Couple smiling in their new home surrounded by moving boxes" width="900" height="600" loading="lazy"></div>
+          <h3>Mortgage loans</h3>
+          <p>Get a new SecurBank mortgage offer to buy the home you dream of. Leave your email and we'll send our special offer.</p>
+          <a class="link" href="#">Get the offer</a>
+        </article>
+        <article class="offer feature">
+          <div class="art"><img src="/assets/images/cards.webp" alt="Customer paying with a card at a contactless terminal" width="900" height="600" loading="lazy"></div>
+          <h3>Maximise rewards with SecurBank credit cards</h3>
+          <p>From cash back to travel perks, our cards offer low rates and big benefits. Apply today and start saving.</p>
+          <a class="link" href="/credit-cards/">Apply for a card</a>
+        </article>
+        <article class="offer">
+          <div class="art"><img src="/assets/images/family.webp" alt="Parents swinging their daughter on an autumn walk" width="900" height="600" loading="lazy"></div>
+          <h3>Build a strong foundation</h3>
+          <p>High-yield accounts with great returns and special bonuses, for your family's financial stability and growth.</p>
+          <a class="link" href="#">Learn more</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap band-grid">
+      <div>
+        <h2 class="display">We made it simple</h2>
+        <p class="lede">No branch visits, no paperwork in the post. Apply, sign and get a decision online.</p>
+        <ul class="checks">
+          <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>100% online application</li>
+          <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Flexible terms based on your needs</li>
+          <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No hidden fees</li>
+        </ul>
+      </div>
+      <div class="rate-wrap">
+        <img class="band-photo" src="/assets/images/online.webp" alt="Couple applying online together on a laptop" width="1200" height="800" loading="lazy">
+        <div class="rate-card">
+          <span class="eyebrow">The best rate is waiting</span>
+          <span class="num">4.85<sup>%</sup></span>
+          <p>AER on the SecurBank high-yield account</p>
+          <a class="btn" href="#">Apply now</a>
+          <small>Example rate for a fictitious bank.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="support">
+    <div class="wrap col">
+      <div class="col-main">
+        <img class="col-photo" src="/assets/images/support.webp" alt="Adviser reviewing finances with a young couple at home" width="1100" height="733" loading="lazy">
+        <h2 class="display">Cost of living support</h2>
+        <p>Tools and tips to help you with the everyday cost of living, from budgeting to talking to us early if repayments get tight.</p>
+        <a class="btn btn-primary" href="#">Explore support</a>
+      </div>
+      <div class="tips">
+        <a class="tip" href="#">
+          <span class="tip-head"><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><h3>Budget planner</h3></span>
+          <p>See where your money goes each month and set limits by category.</p>
+          <span class="more">Plan your budget<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="tip" href="#">
+          <span class="tip-head"><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Payment holidays</h3></span>
+          <p>Check if you can pause a repayment without affecting your credit score.</p>
+          <span class="more">Check if you can pause<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="tip" href="#">
+          <span class="tip-head"><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg></span><h3>Bill protection</h3></span>
+          <p>Insurance that covers essential bills if your income drops.</p>
+          <span class="more">Get a quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="tip" href="#">
+          <span class="tip-head"><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><h3>Talk to us</h3></span>
+          <p>Our support team can review your options with you, 24/7.</p>
+          <span class="more">Start a chat<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

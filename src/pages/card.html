@@ -1,0 +1,120 @@
+<!--@ {
+  "each": "cards",
+  "out": "credit-cards/{{key}}/index.html",
+  "title": "{{card.name}} credit card | SecurBank",
+  "description": "{{card.intro}}",
+  "css": "card", "js": "card", "nav": "credit-cards-child"
+} -->
+<main id="main" data-card="{{key}}">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/credit-cards/">Credit cards</a></li>
+        <li><span aria-current="page">{{card.short}}</span></li>
+      </ol>
+    </nav>
+
+    <div class="d-hero">
+      <div>
+        <h1 class="display">{{card.name}}</h1>
+        <p class="lede">{{card.intro}}</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/credit-cards/apply/?card={{key}}">Apply now</a>
+          <a class="btn btn-secondary" href="/credit-cards/#eligibility">Check eligibility first</a>
+        </div>
+      </div>
+      <div class="card-stage">
+        <div class="ccard {{card.cls}}" role="img" aria-label="{{card.name}} card design">
+          <div class="top"><span class="brand">SecurBank</span><span class="name">{{card.short}}</span></div>
+          <span class="chip"></span>
+          <div class="bottom"><span class="num">{{card.num}}</span><span class="name">{{card.kind}}</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="hi"><b>{{card.headline}}</b><span>{{card.headlineLabel}}</span></div>
+      <div><b>{{card.apr}}</b><span>APR representative (variable)</span></div>
+      <div><b>{{card.fee}}</b><span>annual fee</span></div>
+      <div><b>{{card.limitShort}}</b><span>{{card.limitLabel}}</span></div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">{{card.earnTitle}}</h2>
+        <p class="lede">{{card.earnLede}}</p>
+      </div>
+      <div class="earn">
+{{#each card.earn}}        <div class="earn-tile"><b>{{this.big}}</b><h3>{{this.title}}</h3><p>{{this.text}}</p></div>
+{{/each}}      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap band-grid">
+      <div>
+        <h2 class="display">{{card.estTitle}}</h2>
+        <p class="lede">{{card.estLede}}</p>
+      </div>
+      <div class="est" data-est>
+        <label for="cd-spend">{{card.estInput}}</label>
+        <span class="amount" data-est-amount aria-hidden="true">£1,200</span>
+        <input id="cd-spend" type="range" min="100" max="5000" step="50" value="1200" aria-valuetext="£1,200">
+        <div class="scale" aria-hidden="true"><span>£100</span><span>£5,000</span></div>
+        <div class="est-out" aria-live="polite">
+          <span>{{card.estOut}}</span>
+          <strong data-est-out></strong>
+        </div>
+        <small>An estimate only, based on the figures above. Example rates for a fictitious bank.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap two">
+      <div>
+        <div class="sec-head"><h2 class="display">Rates and fees</h2></div>
+        <div class="table-box" tabindex="0" role="region" aria-label="Rates and fees">
+          <table class="rates">
+            <tbody>
+{{#each card.rates}}              <tr><th scope="row">{{this.label}}</th><td>{{this.value}}</td></tr>
+{{/each}}            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="elig-box">
+        <h3>Can I apply?</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>You're 18 or over and live in the UK</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>Your income is {{card.minIncome}} or more a year</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>You haven't been declared bankrupt in the last 6 years</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>You don't already hold a {{card.name}} card</li>
+        </ul>
+        <h3 class="docs-head">Important documents</h3>
+        <div class="docs">
+          <a href="#">Summary box<span class="sr"> for {{card.name}}</span><span aria-hidden="true">PDF</span></a>
+          <a href="#">Pre-contract information<span class="sr"> for {{card.name}}</span><span aria-hidden="true">PDF</span></a>
+          <a href="#">Terms and conditions<span class="sr"> for {{card.name}}</span><span aria-hidden="true">PDF</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="apply-cta">
+      <div>
+        <h2 class="display">Ready to apply?</h2>
+        <p>It takes about 10 minutes. You'll get a decision online, and you can start using your card in your mobile wallet as soon as you're approved.</p>
+      </div>
+      <a class="btn" href="/credit-cards/apply/?card={{key}}">Start my application</a>
+    </div>
+    <div class="legal">
+      <b>Representative example</b>
+      <p>{{card.repExample}}</p>
+      <p>All rates, fees and offers on this page are examples for a fictitious bank, for illustration only.</p>
+    </div>
+  </div>
+</main>

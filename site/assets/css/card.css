@@ -1,0 +1,91 @@
+/* Card details pages */
+
+h2.display { font-size: clamp(2.2rem, 5vw, 3.8rem) }
+h3 { font-size: 1.25rem }
+section.block { padding-block: 80px }
+.sec-head .lede { max-width: 42ch }
+
+.crumbs { font-size: .9rem; color: var(--muted); padding-top: 24px }
+.crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.crumbs li { display: flex; gap: 8px; align-items: center }
+.crumbs li + li::before { content: "/"; color: var(--muted) }
+.crumbs a { font-weight: 600; color: var(--fg); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px }
+.crumbs a:hover { text-decoration: underline }
+
+.d-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; padding-block: 32px 72px }
+@media (max-width: 900px) { .d-hero { grid-template-columns: 1fr; gap: 32px; padding-bottom: 48px } }
+.d-hero h1 { font-size: clamp(2.8rem, 6.5vw, 5.4rem); line-height: .95 }
+.d-hero .lede { margin-top: 18px }
+.cta-row { margin-top: 28px }
+
+.card-stage { background: var(--mint); border-radius: 32px; padding: clamp(28px, 6vw, 64px); display: grid; place-items: center }
+.card-stage .ccard { width: 100%; max-width: 420px; border-radius: 20px; padding: 22px 24px; box-shadow: 0 26px 50px -24px rgba(2, 40, 44, .6); transform: rotate(-4deg) }
+.card-stage .ccard::after { border-width: 30px }
+.card-stage .ccard .brand { font-size: 1.15rem }
+.card-stage .ccard .chip { width: 46px; height: 35px }
+.card-stage .ccard .name { font-size: .92rem }
+.card-stage .ccard .num { font-size: .85rem }
+@media (max-width: 420px) {
+  .card-stage .ccard { padding: 16px 18px; border-radius: 16px }
+  .card-stage .ccard .chip { width: 36px; height: 27px }
+  .card-stage .ccard .brand { font-size: .95rem }
+  .card-stage .ccard .name { font-size: .74rem }
+  .card-stage .ccard .num { font-size: .72rem }
+}
+
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: -24px; position: relative }
+@media (max-width: 900px) { .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0 } }
+.facts div { background: var(--tile); border-radius: 24px; padding: 20px 22px; display: grid; gap: 4px; align-content: start }
+.facts b { font-family: var(--display); font-weight: 900; font-stretch: 88%; font-size: 2.2rem; line-height: 1; font-variant-numeric: tabular-nums }
+.facts span { color: var(--muted); font-size: .9rem; line-height: 1.35 }
+.facts .hi { background: var(--primary); color: var(--ink) }
+.facts .hi span { color: var(--ink); opacity: .85 }
+@media (max-width: 420px) { .facts div { padding: 16px } .facts b { font-size: 1.9rem } }
+
+.earn { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px }
+@media (max-width: 900px) { .earn { grid-template-columns: 1fr } }
+.earn-tile { border: 1px solid var(--line); border-radius: 24px; padding: 24px; display: grid; gap: 8px; align-content: start }
+.earn-tile b { font-family: var(--display); font-weight: 900; font-stretch: 88%; font-size: 2.6rem; line-height: 1; color: var(--primary); text-transform: uppercase }
+.earn-tile p { color: var(--muted) }
+
+/* Estimator band */
+.band-grid { padding-block: 88px }
+.band .lede { margin-top: 18px }
+@media (max-width: 900px) { .band-grid { padding-block: 64px } }
+.est { background: var(--card); color: var(--fg); border-radius: 32px; padding: 28px; display: grid; gap: 14px }
+.est label { font-size: .9rem; color: var(--muted); font-weight: 600 }
+.est .amount { font-family: var(--display); font-weight: 900; font-stretch: 88%; font-size: 2.4rem; line-height: 1; font-variant-numeric: tabular-nums }
+.est input[type=range] { width: 100%; accent-color: var(--primary); height: 28px; margin: 0; cursor: pointer }
+.est .scale { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted) }
+.est-out { background: var(--mint); border-radius: 20px; padding: 18px 20px; display: grid; gap: 4px }
+.est-out span { color: var(--muted); font-size: .9rem }
+.est-out strong { font-family: var(--display); font-weight: 900; font-stretch: 85%; font-size: 3rem; line-height: 1; font-variant-numeric: tabular-nums }
+.est small { color: var(--muted); font-size: .78rem; line-height: 1.4 }
+
+/* Rates and eligibility */
+.two { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; align-items: start }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr } }
+.two .sec-head { margin-bottom: 32px }
+.rates { min-width: 480px }
+.rates th, .rates td { padding: 15px 20px }
+.rates tbody th { font-weight: 600; color: var(--muted); width: 46% }
+.rates td { font-weight: 600 }
+@media (max-width: 520px) {
+  .rates { min-width: 0 }
+  .rates th, .rates td { padding: 12px 14px }
+}
+.elig-box { background: var(--tile); border-radius: 24px; padding: 24px; display: grid; gap: 14px }
+.elig-box ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px }
+.elig-box li { display: flex; gap: 10px; align-items: flex-start }
+.elig-box svg { flex: none; margin-top: 3px; color: var(--primary) }
+.docs-head { margin-top: 8px }
+.docs { display: grid; gap: 10px; margin-top: 4px }
+.docs a { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; text-decoration: none; font-weight: 600; min-height: 44px }
+.docs a:hover { border-color: var(--fg) }
+
+.apply-cta { background: var(--primary); color: var(--ink); border-radius: 32px; padding: clamp(28px, 5vw, 48px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px }
+.apply-cta h2 { color: var(--ink) }
+.apply-cta p { opacity: .85; margin-top: 12px; max-width: 46ch }
+.apply-cta .btn { background: var(--ink); color: var(--primary) }
+.legal { margin-top: 24px }
+.ftr { margin-top: 72px }

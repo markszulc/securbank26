@@ -1,0 +1,90 @@
+{
+  "cashback": {
+    "short": "Cashback", "name": "SecurBank Cashback", "kind": "Rewards", "cls": "k-cash", "num": "•••• 1288",
+    "intro": "Earn 1% cashback on everything you buy, with 5% at supermarkets for your first three months. No annual fee.",
+    "headline": "1%", "headlineLabel": "cashback on all spend", "apr": "24.9%", "fee": "£0", "limitShort": "£15k", "limitLabel": "credit limits up to £15,000",
+    "earnTitle": "How you earn", "earnLede": "Cashback lands in your balance every month, automatically.",
+    "earn": [
+      { "big": "5%", "title": "Supermarkets, first 3 months", "text": "Boosted cashback on your weekly shop, up to £100 in total." },
+      { "big": "1%", "title": "Everything else", "text": "On every purchase, at home and abroad, with no cap." },
+      { "big": "Monthly", "title": "Paid automatically", "text": "Credited to your balance each statement. Nothing to redeem." }
+    ],
+    "estTitle": "See what you could earn", "estLede": "Move the slider to your typical monthly card spend.",
+    "estInput": "Your monthly card spend", "estOut": "Cashback in your first year",
+    "rates": [
+      { "label": "Purchase rate", "value": "24.9% p.a. variable" }, { "label": "Balance transfer rate", "value": "24.9% p.a. variable" },
+      { "label": "Balance transfer fee", "value": "3% (min £5)" }, { "label": "Cash advance rate", "value": "29.9% p.a. variable" },
+      { "label": "Cash advance fee", "value": "3% (min £3)" }, { "label": "Foreign transaction fee", "value": "2.99%" },
+      { "label": "Late payment fee", "value": "£12" }, { "label": "Annual fee", "value": "£0" }
+    ],
+    "minIncome": "£18,000",
+    "repExample": "If you spend £1,200 at a purchase rate of 24.9% p.a. (variable), your representative rate is 24.9% APR (variable).",
+    "applyBlurb": "1% cashback · £0 fee", "maxLimit": 15000
+  },
+  "voyager": {
+    "short": "Voyager", "name": "SecurBank Voyager", "kind": "Travel", "cls": "k-voy", "num": "•••• 9023",
+    "intro": "Points on every pound, no fees when you spend abroad and four airport lounge passes a year.",
+    "headline": "2x", "headlineLabel": "points per £1 spent abroad", "apr": "29.9%", "fee": "£95", "limitShort": "£25k", "limitLabel": "credit limits up to £25,000",
+    "earnTitle": "How you earn", "earnLede": "Collect points on everyday spending and double them when you travel.",
+    "earn": [
+      { "big": "20k", "title": "Welcome bonus", "text": "Bonus points when you spend £3,000 in your first three months." },
+      { "big": "2x", "title": "Spending abroad", "text": "Two points per £1 in any foreign currency, with no transaction fee." },
+      { "big": "1x", "title": "Everything else", "text": "One point per £1 at home. Redeem for flights, hotels or statement credit." }
+    ],
+    "estTitle": "See what you could earn", "estLede": "Move the slider to your typical monthly card spend.",
+    "estInput": "Your monthly card spend", "estOut": "Points in your first year",
+    "rates": [
+      { "label": "Purchase rate", "value": "29.9% p.a. variable" }, { "label": "Balance transfer rate", "value": "29.9% p.a. variable" },
+      { "label": "Balance transfer fee", "value": "3% (min £5)" }, { "label": "Cash advance rate", "value": "32.9% p.a. variable" },
+      { "label": "Cash advance fee", "value": "3% (min £3)" }, { "label": "Foreign transaction fee", "value": "0%" },
+      { "label": "Late payment fee", "value": "£12" }, { "label": "Annual fee", "value": "£95" }
+    ],
+    "minIncome": "£35,000",
+    "repExample": "If you spend £1,200 at a purchase rate of 22.9% p.a. (variable) with a £95 annual fee, your representative rate is 29.9% APR (variable).",
+    "applyBlurb": "Travel points · £95 fee", "maxLimit": 25000
+  },
+  "clear": {
+    "short": "Clear", "name": "SecurBank Clear", "kind": "Low rate", "cls": "k-clear", "num": "•••• 4417",
+    "intro": "Move existing card balances over and pay them down with 0% interest for up to 24 months.",
+    "headline": "0%", "headlineLabel": "on balance transfers for 24 months", "apr": "21.9%", "fee": "£0", "limitShort": "£10k", "limitLabel": "credit limits up to £10,000",
+    "earnTitle": "How it helps", "earnLede": "Every repayment goes toward what you owe, not interest.",
+    "earn": [
+      { "big": "24 mo", "title": "0% on balance transfers", "text": "Transfer within 60 days of opening. A 3% fee applies." },
+      { "big": "12 mo", "title": "0% on purchases", "text": "Spread the cost of bigger purchases interest-free for a year." },
+      { "big": "21.9%", "title": "Low standard rate", "text": "A lower rate when the offers end than most cards." }
+    ],
+    "estTitle": "See what you could save", "estLede": "Move the slider to the balance you want to transfer.",
+    "estInput": "Balance to transfer", "estOut": "Interest saved over 24 months (approx.)",
+    "rates": [
+      { "label": "Purchase rate", "value": "0% for 12 months, then 21.9% p.a." }, { "label": "Balance transfer rate", "value": "0% for 24 months, then 21.9% p.a." },
+      { "label": "Balance transfer fee", "value": "3% (min £5)" }, { "label": "Cash advance rate", "value": "27.9% p.a. variable" },
+      { "label": "Cash advance fee", "value": "3% (min £3)" }, { "label": "Foreign transaction fee", "value": "2.99%" },
+      { "label": "Late payment fee", "value": "£12" }, { "label": "Annual fee", "value": "£0" }
+    ],
+    "minIncome": "£12,000",
+    "repExample": "If you spend £1,200 at a purchase rate of 21.9% p.a. (variable), your representative rate is 21.9% APR (variable).",
+    "applyBlurb": "0% balance transfers · £0 fee", "maxLimit": 10000
+  },
+  "starter": {
+    "short": "Starter", "name": "SecurBank Starter", "kind": "Credit builder", "cls": "k-start", "num": "•••• 7730",
+    "intro": "A simple first card with a sensible limit, to help you build a credit history step by step.",
+    "headline": "6 mo", "headlineLabel": "until your first limit review", "apr": "34.9%", "fee": "£0", "limitShort": "£1.5k", "limitLabel": "starting limits £250 to £1,500",
+    "earnTitle": "How it helps", "earnLede": "Use it for small purchases, pay on time, and watch your score grow.",
+    "earn": [
+      { "big": "Free", "title": "Credit score in the app", "text": "Track your score monthly and see what moves it." },
+      { "big": "6 mo", "title": "Limit reviews", "text": "Pay on time and we review your limit after six months." },
+      { "big": "Alerts", "title": "Payment reminders", "text": "Never miss a payment with reminders before the due date." }
+    ],
+    "estTitle": "Pay in full, pay no interest", "estLede": "Move the slider to see the interest you avoid each year by clearing your balance monthly.",
+    "estInput": "Your monthly card spend", "estOut": "Interest avoided per year (approx.)",
+    "rates": [
+      { "label": "Purchase rate", "value": "34.9% p.a. variable" }, { "label": "Balance transfer", "value": "Not available" },
+      { "label": "Cash advance rate", "value": "39.9% p.a. variable" }, { "label": "Cash advance fee", "value": "3% (min £3)" },
+      { "label": "Foreign transaction fee", "value": "2.99%" }, { "label": "Over-limit fee", "value": "£0" },
+      { "label": "Late payment fee", "value": "£12" }, { "label": "Annual fee", "value": "£0" }
+    ],
+    "minIncome": "£0",
+    "repExample": "If you spend £1,200 at a purchase rate of 34.9% p.a. (variable), your representative rate is 34.9% APR (variable).",
+    "applyBlurb": "Build credit · £0 fee", "maxLimit": 1500
+  }
+}

@@ -1,0 +1,248 @@
+<!--@ {
+  "out": "credit-cards/index.html",
+  "title": "Credit cards | SecurBank",
+  "description": "Compare SecurBank credit cards: Cashback, Voyager, Clear and Starter. Check your eligibility without affecting your credit score.",
+  "css": "cards", "js": "cards", "nav": "credit-cards"
+} -->
+<main id="main">
+  <section class="cc-hero">
+    <div class="wrap cc-hero-grid">
+      <div>
+        <span class="eyebrow">SecurBank credit cards</span>
+        <h1 class="display">Cards that <span class="hl">pay you</span> back</h1>
+        <p class="lede">Cashback on the weekly shop, points on every trip, or a low rate to clear what you owe. Find the card that fits how you spend.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#compare">Compare cards</a>
+          <a class="btn btn-secondary" href="#eligibility">Check eligibility</a>
+        </div>
+        <div class="hero-facts">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>No impact on your credit score to check</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>Decision in minutes</span>
+        </div>
+      </div>
+      <div class="stack" aria-hidden="true">
+        <div class="ccard k-clear c1"><div class="top"><span class="brand">SecurBank</span><span class="name">Clear</span></div><span class="chip"></span><div class="bottom"><span class="num">•••• 4417</span><span class="name">Low rate</span></div></div>
+        <div class="ccard k-voy c2"><div class="top"><span class="brand">SecurBank</span><span class="name">Voyager</span></div><span class="chip"></span><div class="bottom"><span class="num">•••• 9023</span><span class="name">Travel</span></div></div>
+        <div class="ccard k-cash c3"><div class="top"><span class="brand">SecurBank</span><span class="name">Cashback</span></div><span class="chip"></span><div class="bottom"><span class="num">•••• 1288</span><span class="name">Rewards</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="compare">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Find your card</h2>
+        <p class="lede">Four cards, each built for a different job. Filter by what matters most to you.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter cards" data-filters>
+        <button type="button" aria-pressed="true" data-filter="all">All cards</button>
+        <button type="button" aria-pressed="false" data-filter="rewards">Rewards</button>
+        <button type="button" aria-pressed="false" data-filter="low">Low rate</button>
+        <button type="button" aria-pressed="false" data-filter="build">Building credit</button>
+      </div>
+      <p class="sr" aria-live="polite" data-filter-status></p>
+      <div class="products">
+        <article class="product feature" data-groups="rewards" aria-labelledby="p-cashback">
+          <div class="ccard k-cash" aria-hidden="true"><div class="top"><span class="brand">SecurBank</span></div><span class="chip"></span><div class="bottom"><span class="num">•••• 1288</span><span class="name">Cashback</span></div></div>
+          <div class="product-body">
+            <span class="tag">Most popular</span>
+            <h3 id="p-cashback">SecurBank Cashback</h3>
+            <p>Earn on everything you buy, with boosted cashback at supermarkets for your first three months.</p>
+            <div class="stats">
+              <div><b>1%</b><span>cashback on all spend</span></div>
+              <div><b>£0</b><span>annual fee</span></div>
+              <div><b>24.9%</b><span>APR representative (variable)</span></div>
+            </div>
+            <ul class="perks">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>5% at supermarkets for 3 months, up to £100</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>Cashback paid to your balance every month</li>
+            </ul>
+            <div class="actions"><a class="btn btn-primary" href="/credit-cards/apply/?card=cashback">Apply now<span class="sr"> for SecurBank Cashback</span></a><a class="link" href="/credit-cards/cashback/">Card details<span class="sr"> for SecurBank Cashback</span></a></div>
+          </div>
+        </article>
+        <article class="product" data-groups="rewards" aria-labelledby="p-voyager">
+          <div class="ccard k-voy" aria-hidden="true"><div class="top"><span class="brand">SecurBank</span></div><span class="chip"></span><div class="bottom"><span class="num">•••• 9023</span><span class="name">Voyager</span></div></div>
+          <div class="product-body">
+            <span class="tag">Travel</span>
+            <h3 id="p-voyager">SecurBank Voyager</h3>
+            <p>Points on every pound, no fees when you spend abroad and lounge access when you fly.</p>
+            <div class="stats">
+              <div><b>2x</b><span>points per £1 spent abroad</span></div>
+              <div><b>£95</b><span>annual fee</span></div>
+              <div><b>29.9%</b><span>APR representative (variable)</span></div>
+            </div>
+            <ul class="perks">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>0% foreign transaction fees</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>4 airport lounge passes a year</li>
+            </ul>
+            <div class="actions"><a class="btn btn-primary" href="/credit-cards/apply/?card=voyager">Apply now<span class="sr"> for SecurBank Voyager</span></a><a class="link" href="/credit-cards/voyager/">Card details<span class="sr"> for SecurBank Voyager</span></a></div>
+          </div>
+        </article>
+        <article class="product" data-groups="low" aria-labelledby="p-clear">
+          <div class="ccard k-clear" aria-hidden="true"><div class="top"><span class="brand">SecurBank</span></div><span class="chip"></span><div class="bottom"><span class="num">•••• 4417</span><span class="name">Clear</span></div></div>
+          <div class="product-body">
+            <span class="tag">Low rate</span>
+            <h3 id="p-clear">SecurBank Clear</h3>
+            <p>Move existing card balances over and pay them down with no interest for up to two years.</p>
+            <div class="stats">
+              <div><b>0%</b><span>on balance transfers for 24 months</span></div>
+              <div><b>£0</b><span>annual fee</span></div>
+              <div><b>21.9%</b><span>APR representative (variable)</span></div>
+            </div>
+            <ul class="perks">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>3% balance transfer fee</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>0% on purchases for 12 months</li>
+            </ul>
+            <div class="actions"><a class="btn btn-primary" href="/credit-cards/apply/?card=clear">Apply now<span class="sr"> for SecurBank Clear</span></a><a class="link" href="/credit-cards/clear/">Card details<span class="sr"> for SecurBank Clear</span></a></div>
+          </div>
+        </article>
+        <article class="product" data-groups="build" aria-labelledby="p-starter">
+          <div class="ccard k-start" aria-hidden="true"><div class="top"><span class="brand">SecurBank</span></div><span class="chip"></span><div class="bottom"><span class="num">•••• 7730</span><span class="name">Starter</span></div></div>
+          <div class="product-body">
+            <span class="tag">Building credit</span>
+            <h3 id="p-starter">SecurBank Starter</h3>
+            <p>A simple first card with a sensible limit, to help you build a credit history step by step.</p>
+            <div class="stats">
+              <div><b>£250</b><span>to £1,500 starting limit</span></div>
+              <div><b>£0</b><span>annual fee</span></div>
+              <div><b>34.9%</b><span>APR representative (variable)</span></div>
+            </div>
+            <ul class="perks">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>Limit reviewed after 6 months</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg>Free credit score in the app</li>
+            </ul>
+            <div class="actions"><a class="btn btn-primary" href="/credit-cards/apply/?card=starter">Apply now<span class="sr"> for SecurBank Starter</span></a><a class="link" href="/credit-cards/starter/">Card details<span class="sr"> for SecurBank Starter</span></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top: 0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Side by side</h2>
+        <p class="lede">The numbers that matter, all in one place.</p>
+      </div>
+      <div class="table-box" tabindex="0" role="region" aria-label="Card comparison table">
+        <table class="compare">
+          <thead>
+            <tr><th scope="col"><span class="sr">Feature</span></th><th scope="col">Cashback</th><th scope="col">Voyager</th><th scope="col">Clear</th><th scope="col">Starter</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Best for</th><td>Everyday spending</td><td>Travel abroad</td><td>Paying off balances</td><td>Building credit</td></tr>
+            <tr><th scope="row">Representative APR</th><td>24.9% variable</td><td>29.9% variable</td><td>21.9% variable</td><td>34.9% variable</td></tr>
+            <tr><th scope="row">Annual fee</th><td>£0</td><td>£95</td><td>£0</td><td>£0</td></tr>
+            <tr><th scope="row">Rewards</th><td>1% cashback</td><td>1 point per £1, 2 abroad</td><td>None</td><td>None</td></tr>
+            <tr><th scope="row">Intro offer</th><td>5% supermarket cashback, 3 months</td><td>20,000 bonus points</td><td>0% balance transfers, 24 months</td><td>None</td></tr>
+            <tr><th scope="row">Foreign transaction fee</th><td>2.99%</td><td>0%</td><td>2.99%</td><td>2.99%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="eligibility">
+    <div class="wrap band-grid">
+      <div>
+        <h2 class="display">Know before you apply</h2>
+        <p class="lede">Tell us a little about yourself and we'll show which cards you're likely to be accepted for. It's a soft check, so it won't affect your credit score.</p>
+        <ul class="checks">
+          <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Takes about a minute</li>
+          <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No impact on your credit score</li>
+          <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No obligation to apply</li>
+        </ul>
+      </div>
+      <form class="elig" data-elig novalidate>
+        <h3>Eligibility checker</h3>
+        <div class="field">
+          <label for="cc-income">Annual income before tax</label>
+          <input id="cc-income" name="income" inputmode="decimal" autocomplete="off" value="32,000">
+          <span class="unit">GBP</span>
+        </div>
+        <div class="field">
+          <label for="cc-emp">Employment status</label>
+          <select id="cc-emp" name="employment">
+            <option value="employed">Employed</option>
+            <option value="self">Self-employed</option>
+            <option value="student">Student</option>
+            <option value="retired">Retired</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Check my eligibility</button>
+        <div class="elig-result" aria-live="polite" data-elig-result hidden>
+          <strong>You're likely to be accepted for:</strong>
+          <ul></ul>
+        </div>
+        <small>Illustration only. SecurBank is a fictitious bank and this checker does not perform a credit search.</small>
+      </form>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap col">
+      <div class="col-main">
+        <img class="col-photo" src="/assets/images/cards.webp" alt="Customer paying with a card at a contactless terminal" width="900" height="600" loading="lazy">
+        <h2 class="display">Every card comes with</h2>
+        <p>Security and control built in, managed from the SecurBank app.</p>
+        <a class="btn btn-primary" href="#">Get the app</a>
+      </div>
+      <div class="tips">
+        <a class="tip" href="#">
+          <span class="tip-head"><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span><h3>Mobile wallets</h3></span>
+          <p>Add your card to your phone and pay contactless from day one.</p>
+          <span class="more">Set up your wallet<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="tip" href="#">
+          <span class="tip-head"><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></span><h3>Instant freeze</h3></span>
+          <p>Misplaced your card? Freeze and unfreeze it in a tap.</p>
+          <span class="more">How it works<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="tip" href="#">
+          <span class="tip-head"><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg></span><h3>Fraud protection</h3></span>
+          <p>We watch for unusual spending and alert you straight away.</p>
+          <span class="more">Our fraud promise<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="tip" href="#">
+          <span class="tip-head"><span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><h3>Spending insights</h3></span>
+          <p>See your spending by category and set alerts before you hit your limit.</p>
+          <span class="more">See your insights<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top: 0">
+    <div class="wrap faq">
+      <div>
+        <h2 class="display">Questions, answered</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>Will checking my eligibility affect my credit score?</summary>
+          <p>No. The eligibility checker uses a soft search, which only you can see. A full credit check happens only if you go on to apply.</p>
+        </details>
+        <details>
+          <summary>How long does it take to get my card?</summary>
+          <p>Most applications get a decision in minutes. Your card arrives within 3 to 5 working days, and you can add it to your mobile wallet as soon as you're approved.</p>
+        </details>
+        <details>
+          <summary>Can I transfer a balance from another bank?</summary>
+          <p>Yes. With SecurBank Clear you can transfer balances from other cards within 60 days of opening your account. A 3% fee applies to each transfer.</p>
+        </details>
+        <details>
+          <summary>What happens if I can't make a repayment?</summary>
+          <p>Talk to us as early as you can. Our support team can look at your options with you, including a temporary payment plan.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap page-end">
+    <div class="legal">
+      <b>Representative example</b>
+      <p>If you spend £1,200 at a purchase rate of 24.9% p.a. (variable), your representative rate is 24.9% APR (variable).</p>
+      <p>All rates, fees and offers on this page are examples for a fictitious bank, for illustration only.</p>
+    </div>
+  </div>
+</main>
