@@ -97,7 +97,7 @@ components:
 
 **Creative North Star: "The Steady Current"**
 
-SecurBank's visual system is calm, confident forward motion, not stillness. It takes its cue from the hero's own line, "Sail into financial independence": one saturated teal runs through the whole site like current under a boat, surfacing in buttons, links, focus rings, and the feature surfaces that carry the most important choice on a page. Everything else sits on flat, tinted panels so that current reads clearly against a quiet background, and numbers (rates, repayments, limits) are the one place the system slows down and gets exact: tabular, aligned, impossible to misread.
+SecurBank's visual system is calm, confident forward motion, not stillness. It takes its cue from the hero's own line, "Money that moves with you": one saturated teal runs through the whole site like current under a boat, surfacing in buttons, links, focus rings, and the feature surfaces that carry the most important choice on a page. Everything else sits on flat, tinted panels so that current reads clearly against a quiet background, and numbers (rates, repayments, limits) are the one place the system slows down and gets exact: tabular, aligned, impossible to misread.
 
 This system explicitly rejects the generic SaaS-cream fintech look, a cream/off-white background with a single muted-blue accent and a uniform grid of rounded cards, and it equally rejects the dated, bureaucratic high-street bank look of dense navy tables and serif headers. SecurBank is fictitious, but the system is built to feel like a real, self-assured challenger bank: bold uppercase display type for the moments that matter, restrained body type everywhere else, and no decoration that doesn't carry a role.
 

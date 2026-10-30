@@ -1,13 +1,14 @@
 /* Home page */
 
-.hero { position: relative; color: var(--hero-fg); background: var(--band) url("../images/hero.webp") 70% 55% / cover no-repeat; isolation: isolate }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(2, 40, 44, .88) 0%, rgba(2, 40, 44, .62) 38%, rgba(2, 40, 44, .08) 68%, rgba(2, 40, 44, 0) 100%), linear-gradient(0deg, rgba(2, 40, 44, .55) 0%, rgba(2, 40, 44, 0) 40%) }
+/* --text-end is the right edge of the 740px text column (inside the 1200px container).
+   The gradient stays dark up to there, so the headline keeps 3:1 contrast at every width,
+   then fades out over the photo. */
+.hero { --text-end: calc(max(16px, (100% - 1200px) / 2 + 16px) + 740px); position: relative; color: var(--hero-fg); background: var(--band) url("../images/hero.webp") 70% 55% / cover no-repeat; isolation: isolate }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(2, 40, 44, .88) 0%, rgba(2, 40, 44, .72) var(--text-end), rgba(2, 40, 44, .08) calc(var(--text-end) + 22%), rgba(2, 40, 44, 0) 100%), linear-gradient(0deg, rgba(2, 40, 44, .55) 0%, rgba(2, 40, 44, 0) 40%) }
 .hero-inner { padding-block: clamp(64px, 10vw, 120px) clamp(200px, 20vw, 260px) }
-.hero-inner > div { max-width: 680px }
+.hero-inner > div { max-width: 740px }
 .hero h1 { font-size: clamp(3.2rem, 8.5vw, 7rem); color: var(--hero-fg); line-height: 1 }
 .hero h1 .hl { color: var(--pop) }
-/* The 3.2rem minimum is too wide for "independence" on phones, so scale with the viewport. */
-@media (max-width: 520px) { .hero h1 { font-size: 11vw } }
 .hero .lede { margin-top: 24px; color: var(--hero-fg); opacity: .9 }
 .hero .btn-secondary { color: var(--hero-fg) }
 .hero .btn-secondary:hover { background: rgba(255, 255, 255, .14) }
@@ -19,7 +20,7 @@
   .hero-follow { grid-template-columns: 1fr }
   .hero-follow .trust { margin-top: 0; border-radius: 32px }
   .hero { background-position: 72% 50% }
-  .hero::before { background: linear-gradient(180deg, rgba(2, 40, 44, .85) 0%, rgba(2, 40, 44, .55) 60%, rgba(2, 40, 44, .3) 100%) }
+  .hero::before { background: linear-gradient(180deg, rgba(2, 40, 44, .85) 0%, rgba(2, 40, 44, .66) 60%, rgba(2, 40, 44, .36) 100%) }
 }
 
 /* Calculator */
