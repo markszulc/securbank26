@@ -7,6 +7,7 @@
   // Page scripts use window.SB_BASE to build links and fetch data.
   var BASE = window.SB_BASE = new URL('../../', document.currentScript.src).href;
   var LANG_COOKIE = 'sb_lang';
+  var THEME_KEY = 'sb_theme';
   var SEARCH_INDEX = BASE + 'assets/data/search-index.json';
 
   function readCookie(name) {
@@ -57,34 +58,29 @@
     if (closed && opened) { closed.hidden = open; opened.hidden = !open; }
   }
 
-  // Language: label only for now (copy isn't translated). The choice is kept in a cookie
-  // so it carries across pages.
-  function initLang() {
-    var root = document.querySelector('[data-lang]');
-    if (!root) return;
-    var toggle = root.querySelector('[data-lang-toggle]');
-    var menu = root.querySelector('.lang-menu');
-    var codeEl = root.querySelector('[data-lang-code]');
-    var options = Array.prototype.slice.call(menu.querySelectorAll('.lang-opt'));
+  // A button that opens a short list of options, one of which is selected (aria-pressed).
+  // opts.value(option) reads an option's value, opts.show(option) updates the button for the
+  // selected option, and opts.save(value) stores a choice the visitor makes.
+  function initChoiceMenu(root, opts) {
+    var toggle = root.querySelector('[aria-controls]');
+    var menu = root.querySelector('.pop-menu');
+    var options = Array.prototype.slice.call(menu.querySelectorAll('.pop-opt'));
     var overlay = makeOverlay(toggle, menu, {
-      onOpen: function () {
-        var cur = menu.querySelector('[aria-pressed="true"]') || options[0];
-        cur.focus();
-      }
+      onOpen: function () { (menu.querySelector('[aria-pressed="true"]') || options[0]).focus(); }
     });
 
-    function select(code) {
-      var cur = options.filter(function (b) { return b.dataset.code === code; })[0] || options[0];
+    function select(value) {
+      var cur = options.filter(function (b) { return opts.value(b) === value; })[0] || options[0];
       options.forEach(function (b) { b.setAttribute('aria-pressed', String(b === cur)); });
-      codeEl.textContent = cur.dataset.short;
-      toggle.setAttribute('aria-label', 'Language: ' + cur.querySelector('span').textContent + '. Change language');
-      return cur.dataset.code;
+      opts.show(cur, toggle);
+      return opts.value(cur);
     }
-    select(readCookie(LANG_COOKIE) || 'en-GB');
+    select(opts.initial);
 
+    root.selectValue = select;
     options.forEach(function (b) {
       b.addEventListener('click', function () {
-        writeCookie(LANG_COOKIE, select(b.dataset.code));
+        opts.save(select(opts.value(b)));
         overlay.close(true);
       });
     });
@@ -95,6 +91,77 @@
       var i = options.indexOf(document.activeElement);
       var next = e.key === 'ArrowDown' ? (i + 1) % options.length : (i - 1 + options.length) % options.length;
       options[next].focus();
+    });
+  }
+
+  // Language: label only for now (copy isn't translated). The choice is kept in a cookie
+  // so it carries across pages.
+  // There are two controls: the header menu, and in the mobile menu a dropdown.
+  function initLang() {
+    var root = document.querySelector('[data-lang]');
+    if (!root) return;
+    var codeEl = root.querySelector('[data-lang-code]');
+    var select = document.querySelector('[data-lang-select]');
+    initChoiceMenu(root, {
+      initial: readCookie(LANG_COOKIE) || 'en-GB',
+      value: function (b) { return b.dataset.code; },
+      show: function (b, toggle) {
+        codeEl.textContent = b.dataset.short;
+        toggle.setAttribute('aria-label', 'Language: ' + b.querySelector('span').textContent + '. Change language');
+        if (select) select.value = b.dataset.code;
+      },
+      save: function (code) { writeCookie(LANG_COOKIE, code); }
+    });
+    if (select) {
+      select.addEventListener('change', function () {
+        writeCookie(LANG_COOKIE, root.selectValue(select.value));
+      });
+    }
+  }
+
+  // Theme: light, dark, or match the system setting (the default). A forced choice sets
+  // data-theme on <html>; the inline script in <head> re-applies it on the next page load.
+  // There are two controls: the header menu, and on phones a switch in the mobile menu.
+  function initTheme() {
+    var root = document.querySelector('[data-theme-picker]');
+    var seg = Array.prototype.slice.call(document.querySelectorAll('[data-theme-set]'));
+    var stored = null;
+    try { stored = localStorage.getItem(THEME_KEY); } catch (e) { /* storage unavailable */ }
+
+    function apply(v) {
+      if (v === 'system') delete document.documentElement.dataset.theme;
+      else document.documentElement.dataset.theme = v;
+      seg.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.themeSet === v)); });
+    }
+    function save(v) {
+      try {
+        if (v === 'system') localStorage.removeItem(THEME_KEY);
+        else localStorage.setItem(THEME_KEY, v);
+      } catch (e) { /* storage unavailable: the choice lasts for this page only */ }
+    }
+
+    var initial = stored === 'light' || stored === 'dark' ? stored : 'system';
+    if (root) {
+      initChoiceMenu(root, {
+        initial: initial,
+        value: function (b) { return b.dataset.value; },
+        show: function (b, toggle) {
+          var v = b.dataset.value;
+          root.querySelectorAll('[data-theme-icon]').forEach(function (icon) { icon.hidden = icon.dataset.themeIcon !== v; });
+          toggle.setAttribute('aria-label', 'Theme: ' + b.querySelector('span').textContent.toLowerCase() + '. Change theme');
+          apply(v);
+        },
+        save: save
+      });
+    } else {
+      apply(initial);
+    }
+    seg.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = b.dataset.themeSet;
+        if (root) root.selectValue(v); else apply(v);
+        save(v);
+      });
     });
   }
 
@@ -184,6 +251,7 @@
     if (!e.target.closest('[data-header], .hdr')) closeAll();
   });
 
+  initTheme();
   initLang();
   initMenu();
   initSearch();

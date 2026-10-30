@@ -14,6 +14,7 @@
         <svg data-icon-closed width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
         <svg data-icon-open hidden width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
+      {{> theme}}
       {{> lang}}
     </div>
     <div class="nav-account">
@@ -33,6 +34,27 @@
         <li><a href="#">Loans<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
         <li><a href="#">Insurance<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
       </ul>
+      <div class="menu-row">
+        <label for="sb-menu-lang">Language</label>
+        <select id="sb-menu-lang" class="menu-select" data-lang-select>
+          <option value="en-GB" lang="en-GB">English (United Kingdom)</option>
+          <option value="fr" lang="fr">Français (France)</option>
+          <option value="de" lang="de">Deutsch (Deutschland)</option>
+          <option value="es" lang="es">Español (España)</option>
+          <option value="it" lang="it">Italiano (Italia)</option>
+          <option value="ja" lang="ja">日本語 (日本)</option>
+          <option value="ko" lang="ko">한국어 (대한민국)</option>
+          <option value="zh-Hans" lang="zh-Hans">简体中文 (中国大陆)</option>
+        </select>
+      </div>
+      <div class="menu-row" role="group" aria-labelledby="sb-menu-theme">
+        <span id="sb-menu-theme">Theme</span>
+        <div class="seg">
+          <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme-set="dark" aria-pressed="false">Dark</button>
+          <button type="button" data-theme-set="system" aria-pressed="true">System</button>
+        </div>
+      </div>
     </div>
   </nav>
 
